@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt')
 const data = ['assignments', 'assignmentSubmissions','books','bookIssues','presentations','classrooms', 'slots', 'timetables', 'students', 'users', 'exams', 'examDetails', 'examReports','marksheets', 'subjects','paymentCategories','paymentConfigurations','scholarshipConfigurations','informations','events','questionSets','attendances','alumni']
 
 async function test () {
-    await mongoose.connect('mongodb://db:27017/database')
+    await mongoose.connect('mongodb+srv://ams:database27@db@mycluster.d3wpu.mongodb.net/ams?retryWrites=true&w=majority')
 
     for (d of data) {
         const { model, data } = require('./data/' + d)

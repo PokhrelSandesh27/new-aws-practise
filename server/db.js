@@ -16,7 +16,7 @@ const {
   };
 
 //const url = `mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}?authSource=admin`;
-const url = `mongodb://db:27017/database`
+const url = `mongodb+srv://ams:database27@db@mycluster.d3wpu.mongodb.net/ams?retryWrites=true&w=majority`
 exports.connectToDatabase =mongoose.connect(url).then( function() {
   console.log('MongoDB is connectedd');
 })

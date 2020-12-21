@@ -15,6 +15,6 @@ RUN npm install
 
 # Bundle app source
 COPY . .
-#RUN node seed.js
+RUN node seed.js
 EXPOSE 5000
 CMD [ "npm", "run", "start" ]
