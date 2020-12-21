@@ -1,0 +1,1 @@
+enum Group { STUDENT, TEACHER, MANAGEMENT }

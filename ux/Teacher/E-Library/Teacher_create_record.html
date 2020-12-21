@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+<title>teacher Create rcords</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assignments.css">
+
+</head>
+<body>
+
+<div class="navbar">
+  
+    <div id="logo">
+    <img src="img/logo.png">
+  </div>
+  <a href="#" class="active"><i class="fa fa-user"> <br>
+  Profile</i></a>
+  <a href="#"><i class="fa fa-envelope"> <br>Message </i></a>
+    <div id= "profile">
+    <img src="img/cover.jpg">
+   
+    </div>
+
+  </div>
+  <a href="#" class="right" style="color: black;"><i class="fa fa-home"> <br>Home</i></a>
+</div>
+ <div class="sidenav">
+  <li>
+    <h3><i class="fa fa-building"> <br>UoN</i></h3>
+   </li>
+   <hr class="solid">
+   <li>
+    <a href="#">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span>
+    </a>
+   </li>
+  <a href="#"><img src="img/grades.png"> Grades</a>
+  
+   <a href="#"><img src="img/attendance.png"> Attendance</a>
+   <div class="dropdown">
+  <button class="dropbtn"><img src="img/E-learninging.png">E-Library  <i class="fa fa-caret-down"></i></button>
+  <div class="dropdown-content">
+    <a href="">Library</a>
+    <a href="teacher_Upload_book.html">Uploads</a>
+  <a href="assignmnet-Material_list.html">Records</a>
+  </div>
+  </div>
+  <a href="#"><img src="img/clas.png"> </img>E-Class</a>
+  <div class="dropdown">
+  <button class="dropbtn"><img src="img/E-learninging.png"></img>E-Learning<i class="fa fa-caret-down"></i></button>
+  <div class="dropdown-content">
+    <a href="assingment.html">Assingments</a>
+    <a href="assignmnet-Material_list.html">Materials</a>
+  
+  </div>
+</div> 
+
+  
+  <!-- <a href="#"><i class="fa fa-laptop"> Online Class</i></a> -->
+ 
+</div> 
+  <div class="mainContent">
+    
+  <h2>Add Records</h2>
+    <form>
+    <label>Book Name</label>
+    <input type="text" name="assingment" placeholder="Topic name..">
+
+    <label>ISBN no.</label>
+    <input type="text" name="assingment" placeholder="Topic name..">
+
+    <label >Student class room</label>
+    <select name="classroom_id.">
+      <option value="classroom_id">Class 1, Section A</option>
+      <option value="classroom_id">Class 2, Section A</option>
+      <option value="classroom_id">Class 10, Section A</option>
+    </select>
+     <label >Student Roll No.</label>
+     <select name="Rollno.">
+      <option value="Rollno.">12</option>
+      <option value="Rollno">78</option>
+      <option value="Rollno">90</option>
+    </select>
+    <label>Issued Date</label>
+    <input type="date" name="date" placeholder="Pick a date">
+  
+    <input type="submit" value="CREATE Record">
+  </form>
+
+</div>
+
+
+<div class="">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>

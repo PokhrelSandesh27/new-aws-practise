@@ -1,0 +1,871 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+
+:root {
+  --page-header-bgColor: #242e42;
+  --page-header-bgColor-hover: #1d2636;
+  --page-header-txtColor: #dde9f8;
+  --page-header-headingColor: #7889a4;
+  --page-header-width: 220px;
+  --page-content-bgColor: #f0f1f6;
+  --page-content-txtColor: #171616;
+  --page-content-blockColor: #fff;
+  --white: #fff;
+  --black: #333;
+  --blue: #00b9eb;
+  --red: #ec1848;
+  --border-radius: 4px;
+  --box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.075);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+button {
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+button,
+input {
+  border: none;
+}
+
+svg {
+  display: block;
+}
+
+body {
+  font: 16px/1.5 "Lato", sans-serif;
+}
+
+
+/* HEADER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  width: var(--page-header-width);
+  color: var(--page-header-txtColor);
+   background-image: linear-gradient(180deg, #f4f4f4,#0e247a ,  #020024);
+
+}
+
+/*In case you prefer an absolutely positioned header that covers the full page height, add these styles*/
+/*body {
+  position: relative;
+}
+
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}*/
+
+/*remove these styles*/
+/*.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}*/
+
+.page-header nav {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.page-header .logo {
+  display: block;
+  max-width: 100px;
+  margin: 0 25px;
+}
+
+.page-header .toggle-mob-menu {
+  display: none;
+  margin-left: 5px;
+  padding: 4px;
+  background: var(--page-content-blockColor);
+  border-radius: var(--border-radius);
+}
+
+.page-header .toggle-mob-menu svg {
+  fill: var(--black);
+  transition: transform 0.2s;
+}
+
+.page-header .admin-menu {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: 15px;
+}
+
+/*.page-header .admin-menu li:nth-last-child(2) {
+  margin-bottom: 35px;
+}
+
+.page-header .admin-menu li:last-child {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+*/
+.page-header .admin-menu li > * {
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.page-header .admin-menu .menu-heading h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 12px;
+  margin-top: 12px;
+  color: var(--page-header-headingColor);
+}
+
+.page-header .admin-menu svg {
+  width: 40px;
+  height: 35px;
+  fill: var(--page-header-txtColor);
+  margin-right: 10px;
+  transition: fill 0.2s;
+}
+
+.page-header .admin-menu a,
+.page-header .admin-menu button {
+  display: flex;
+  align-items: left;
+  font-size: 15px;
+  font-weight: 200;
+  transition: background 0.2s, color 0.2s;
+}
+
+.page-header .admin-menu a:hover,
+.page-header .admin-menu a:focus,
+.page-header .admin-menu button:hover,
+.page-header .admin-menu button:focus {
+  background: var(--page-header-bgColor-hover);
+  color: var(--blue);
+  outline: none;
+}
+
+.page-header .admin-menu a:hover svg,
+.page-header .admin-menu a:focus svg,
+.page-header .admin-menu button:hover svg,
+.page-header .admin-menu button:focus svg {
+  fill: var(--blue);
+}
+ .dropdown-btn {
+
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+
+  cursor: pointer;
+  outline: none;
+}
+.dropdown-container {
+  display: none;
+  background-color: grey;
+  padding-left: 10px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+
+.navbar {
+  margin-left: 16.2%;
+  overflow: hidden;
+  background-color: #d8dff9;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1;
+   box-shadow: 0 1px 2px 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+  height: 60px;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+
+}
+.avatar {
+  vertical-align: middle;
+  width: 40px;
+  height: 37px;
+  border-radius: 50%;
+}
+
+/* PAGE CONTENT STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-content {
+  position: relative;
+  left: var(--page-header-width);
+  width: calc(100% - var(--page-header-width));
+  min-height: 100vh;
+  padding: 30px;
+  color: var(--page-content-txtColor);
+  background: var(--page-content-bgColor);
+}
+
+.search-and-user {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column-gap: 50px;
+  align-items: center;
+  background: var(--page-content-bgColor);
+  margin-bottom: 30px;
+}
+
+.search-and-user form {
+  position: relative;
+}
+
+.search-and-user input[type="search"] {
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  padding-left: 15px;
+  background: var(--page-content-blockColor);
+  color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.search-and-user ::placeholder {
+  color: var(--page-content-txtColor);
+}
+
+.search-and-user form svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--page-content-txtColor);
+}
+
+.search-and-user form button {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+
+
+.page-content .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.page-content .grid > article {
+  display: flex;
+  height: 100px;
+  background: var(--page-content-blockColor);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.page-content .grid > article:first-child button {
+
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 10%;
+  font-size: 18px;
+}
+.page-content .grid > article:forth-child,
+.page-content .grid > article:third-child{
+   height: 150px;
+  }
+
+.page-content .grid > article:first-child{
+   display: flex;
+  height: 250px;
+  width: 100%;
+ background: var(--page-content-blockColor);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.page-content .grid > article:last-child {
+  grid-column: 1 / -1;
+ 
+
+}
+ .card {
+  box-shadow: 0 4px 8px 0;
+  background-color: #aaa;
+  max-width: 100%;
+  padding: 10px;
+
+  text-align: center;
+  font-family: "sofia";
+  font-style: normal;
+  font-variant: normal;
+  font-size: 16px;
+}
+
+
+.card button {
+
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height: 20%;
+ outline: none;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.card button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.card img {
+   vertical-align: middle;
+  width: 55px;
+  height: 110px;
+  border-radius: 8px;
+  
+}
+
+
+/* MQ RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 767px) {
+  .page-header,
+  .page-content .navbar{
+    position: static;
+    width: 100%;
+  }
+   
+  .page-header {
+    padding: 10px;
+  }
+
+.card button{
+  width: 50%;
+  height:20px;
+  font-size:12px; 
+
+}
+  .page-header nav {
+    flex-direction: row;
+
+  }
+   .navbar {
+    flex-direction: row;
+    margin-left: 0%;
+  }
+
+  .page-header .logo {
+    margin: 0;
+    height: 35px;
+  }
+
+  .page-header .toggle-mob-menu {
+    display: block;
+  }
+
+  .page-header .admin-menu {
+    position: absolute;
+    left: 98px;
+    top: 57px;
+    margin-top: 0;
+    z-index: 2;
+    border-radius: var(--border-radius);
+    background: var(--page-header-bgColor);
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.2s;
+  }
+
+  .page-header .admin-menu li:nth-last-child(2) {
+    margin-bottom: 12px;
+  }
+  
+  .page-header .admin-menu li:last-child, .navbar
+  .search-and-user .admin-profile {
+    display: none;
+  }
+  
+  .page-content {
+    min-height: 0;
+    padding: 10px;
+  }
+
+  .page-content .grid {
+    grid-gap: 10px;
+  }
+
+  .search-and-user .navbar {
+    position: absolute;
+    left: 131px;
+    top: 10px;
+    padding: 0;
+    grid-column-gap: 5px;
+    width: calc(100% - 141px);
+    border-radius: var(--border-radius);
+    background: transparent;
+  }
+
+  .search-and-user input[type="search"] {
+    font-size: 1rem;
+    height: 35px;
+  }
+
+  .search-and-user form svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .search-and-user .admin-profile svg {
+    fill: var(--white);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .page-content .grid .card button > article {
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* BODY CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.mob-menu-opened .toggle-mob-menu svg {
+  transform: rotate(180deg);
+}
+
+.mob-menu-opened .page-header .admin-menu {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .collapsed .page-header .navbar  {
+    width: 40px;
+  }
+
+  .collapsed .page-header .admin-menu li > * {
+    padding: 10px;
+  }
+
+  .collapsed .page-header .logo,
+  .collapsed .page-header .admin-menu span,
+  .collapsed .page-header .admin-menu .menu-heading {
+    display: none;
+  }
+
+  .collapsed .page-header .admin-menu svg {
+    margin-right: 0;
+  }
+
+  .collapsed .page-header .collapse-btn svg {
+    transform: rotate(180deg);
+  }
+
+  .collapsed .page-content {
+    left: 40px;
+    width: calc(100% - 40px);
+  }
+}
+
+
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+  font-size: 0.85rem;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.page-footer span {
+  color: var(--red);
+}
+
+
+
+
+
+/*Assignment -----------------------------------------------------*/
+.w3-button{   
+ margin-left: 17%;
+display: inline-block;
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+   background-color:#48D1CC ;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+    
+}
+.createbtn {
+ 
+  padding: 10px 15px;
+  margin-left: 3%;
+   display: flex;
+ text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  cursor: pointer; 
+  background-color: #87CEEB;
+}
+.createbtn:hover{
+  background-color: pink;
+
+}
+.createbtn:active {
+  background-color: skyblue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+.w3-bar {
+  display: flex;
+  overflow-x: auto;
+  background-color: darkgrey;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/*......................................*/
+
+#classroom-table {
+ font-size: 18px;
+  width: 100%
+  border-collapse: collapse;
+ 
+
+}
+
+#classroom-table td, #classroom-table th {
+  text-align: center;
+  font-size: 12px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#classroom-table tr:nth-child(even){background-color: #808080;}
+#classroom-table tr:nth-child(odd){background-color: #ddd;}
+
+#classroom-table tr:hover {background-color: #B0E0E6;}
+
+#classroom-table th {
+ /* padding-top: 12px;
+  padding-bottom: 12px;*/
+  text-align: center;
+  background-color: #455568E6;
+  font-size: 16px;
+  color: white;
+}
+
+
+.attend-button{
+  height: 45%;
+  padding: 5%;
+  width: 35%;
+  font-size: 12px;
+  box-shadow: black;
+  border-radius: 8px;
+ font-family: "sofia";
+  font-style: normal;
+  font-variant: normal;
+
+}
+
+.attend-button:hover{
+background-color: #808080;
+color: white;
+}
+/*----------------------------------------------------------------------------------Form-----------------------*/
+ form input[type=text], select {
+  width: 50%;
+  padding: 10px 15px;
+  margin: 5px 0;
+   display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+  form input[type=submit] {
+   width: 20%;
+  padding: 10px 15px;
+  margin-left: 65%;
+   display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+   background-color: #3e8e41; 
+ }
+ form input[type=date] {
+  width: 50%;
+  padding: 10px 15px;
+  margin: 5px 0;
+   display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+form input[type=file] {
+  width: 50%;
+  padding: 10px 15px;
+  margin: 5px 0;
+   display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; 
+}
+form{
+
+}
+
+form label {
+    display: flex;
+    font-size: 18px;
+    padding: 10px 15px;
+    font-style: normal;
+    font-variant: normal;
+}
+
+form input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+
+/*------------------------------------------------------------------------Profile=======================================================*/
+.profile-pic {
+  position: relative;
+  display: inline-block;
+  margin-left: 35%;
+  margin-top: 5%;
+}
+.profile-pic img{
+  border-radius: 50%;
+  background-color: red;
+}
+
+.profile-pic:hover .edit {
+  display: block;
+}
+
+.edit {
+  padding-top: 7px; 
+  padding-right: 7px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+
+.edit a {
+  color: #000;
+}
+
+
+
+.page-content .pic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 45px;
+}
+
+.page-content .pic-grid > article {
+  display: flex;
+  height: 100px;
+  background: var(--page-content-blockColor);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.page-content .pic-grid > article:first-child button {
+
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 10%;
+  font-size: 18px;
+}
+.page-content .pic-grid > article:last-child{
+  display: flex;
+  height: 300px;
+ /* background-color: lightgrey;*/
+  }
+
+.page-content .pic-grid > article:first-child{
+   display: flex;
+  height: 250px;
+  width: 100%;
+ background: var(--page-content-blockColor);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  background-color:   #ADD8E6;
+}
+.page-content .pic-grid > article:first-child,
+.page-content .pic-grid > article:last-child {
+  grid-column: 1 / -1;
+ 
+
+}
+.page-content .datarow{
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: #fff;
+  color: black;
+
+}
+.page-content  .vertical-line{
+display: inline-block;
+border-left: 1px solid #ccc;
+ margin-left: 35%;
+height: 300px;
+}
+
+/*---------------------------------------------------------------------------Stream----------------------------------------------*/
+
+
+.page-content .Stream-menu li > * {
+  width: 100%;
+  padding: 1px 10px;
+  margin-left: 10%
+ 
+}
+.page-content .Stream-menu > li a:hover{
+border-color: #00C0FF;
+box-shadow: 0px 0px 7px #00C0FF;
+text-decoration: none;
+outline: medium none;
+transition: all 0.3s ease 0s;
+transform: scale(1.3);
+background-color: white;
+z-index: 1;
+}
+
+.page-content .Stream-menu .Stream-heading">
+  h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 18px;
+  margin-top: 12px;
+  color: var(--page-header-headingColor);
+}
+
+.page-content .Stream-menu svg {
+  display: inline;
+  width: 40px;
+  height: 35px;
+ color: black;
+  margin-right: 10px;
+  transition: fill 0.2s;
+}
+
+.page-content.Stream-menu a,
+.page-content .Stream-menu button {
+  display: flex;
+  align-items: left;
+  font-size: 15px;
+  font-weight: 200;
+  transition: background 0.2s, color 0.2s;
+}
+
+.page-content .Stream-menu a:hover,
+.page-content .Stream-menu a:focus,
+.page-content .Stream-menu li:hover,
+.page-content .Stream-menu li:focus {
+  background: white;
+  color: var(--blue);
+  :active {font-size: 150%;}
+  outline: none;
+}
+
+.page-content .Stream-menu a:hover svg,
+.page-content .Stream-menu a:focus svg,
+.page-content .Stream-menu button:hover svg,
+.page-content .Stream-menu button:focus svg {
+  fill: var(--blue);
+}

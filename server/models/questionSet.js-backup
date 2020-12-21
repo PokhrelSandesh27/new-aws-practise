@@ -1,0 +1,80 @@
+const Joi = require('joi')
+const mongoose = require('mongoose')
+
+
+let AnswerOptionSchema = new mongoose.Schema({
+  optionNumber: {
+    type: Number,
+    required: true
+  },
+  answerBody: {
+    type: String,
+    minlength: 1,
+    maxlength: 200,
+    required: true
+  },
+  isCorrectAnswer: {
+    type: Boolean,
+    default: false
+  }
+});
+
+
+let QuestionSchema = new mongoose.Schema({
+    questionNumber: {
+        type: Number,
+        required: true
+    },
+    question: {
+    type: String,
+    minlength: 10,
+    maxlength: 1000,
+    required:true
+  },
+  answerOptions: {
+    type: [AnswerOptionSchema],
+    default: undefined
+  }
+}, {timestamps: true});
+
+
+
+
+let QuestionSetSchema= new mongoose.Schema({
+  questionSet: {
+      type: [QuestionSchema],
+      required:true
+  },
+  }, {
+  timestamps: true
+  });
+
+function validateQuestionSet (questionSet) {
+    const schema = {
+        questionSet: Joi.array().required()
+    }
+
+    return Joi.validate(questionSet, schema)
+}
+
+function validateSearch (questionSet) {
+  const schema = {
+      questionSet: Joi.string()
+  }
+
+  return Joi.validate(questionSet, schema)
+}
+
+function validateQuestion (question) {
+    const schema = {
+        question: Joi.string().required(),
+        answerOptions: Joi.array().length(4)
+    }
+
+    return Joi.validate(question, schema)
+}
+const QuestionSet = mongoose.model('QuestionSet', QuestionSetSchema)
+
+exports.QuestionSet = QuestionSet
+exports.validate = validateQuestionSet
+exports.validateSearch = validateSearch

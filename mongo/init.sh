@@ -1,0 +1,1 @@
+mongoimport --collection employees --file employeedata.json --jsonArray --uri

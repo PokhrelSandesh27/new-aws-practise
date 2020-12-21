@@ -1,0 +1,116 @@
+.page-content {
+    position: relative;
+    padding: 30px;
+    color:  #171616;
+    background: #f0f1f6;
+}
+.page-content {
+
+    padding: 10px;
+}
+.page-content h2{
+    border-bottom: 1px solid grey;
+    padding-bottom:10px;
+    margin-left: 2%;
+    font-family: 'Shadows Into Light', cursive;
+    margin-bottom: 20px
+}
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 15px;
+    margin-left: 1%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.form label {
+    display: flex;
+    font-size: 18px;
+    padding: 10px 15px;
+    font-style: normal;
+    font-variant: normal;
+}
+input{
+    width: 80%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* .input[type=Date], select {*/
+/*     display: flex;*/
+/*    width: 80%;*/
+/*    padding: 10px 15px;*/
+/*   margin-left: 10%;*/
+/*    display: inline-block;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 10px;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+
+/*button{*/
+/*    width: 20%;*/
+/*    margin-left: 60%;*/
+/*    background-color: #20B2AA;*/
+/*    color: white;*/
+/*    padding: 10px 15px;*/
+/*    border: none;*/
+/*    border-radius: 4px;*/
+/*    cursor: pointer;*/
+/*}*/
+.StudentTable{
+    margin: 10%;
+
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #4a4a4d;
+    font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.StudentTable th,
+td {
+    padding: 10px 13px;
+    vertical-align: middle;
+    text-align: center;
+}
+.StudentTable thead {
+    background: #000000;
+    color: #fff;
+}
+.StudentTable th {
+    font-weight: bold;
+    background: #576186;
+    text-align: center;
+}
+
+.StudentTable tbody tr:nth-child(even) {
+    background: #f0f0f2;
+}
+.StudentTable td img{
+    border-bottom: 1px solid #cecfd5;
+    border-right: 1px solid #cecfd5;
+    height: 30px;
+    width: 30px;
+    border-radius: 10%;
+
+}
+.StudentTable td:first-child {
+    border-left: 1px solid #cecfd5;
+}
+
+ .content {
+    flexGrow: 1;
+    height: 100vh;
+    overflow: auto;
+}
+.container{
+    paddingTop: 4px;
+    paddingBottom: 4px;
+}
+
+

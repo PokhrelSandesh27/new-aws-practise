@@ -1,0 +1,640 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/*------------------------------*/
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+
+
+
+
+
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+/*.header {
+  padding: 10px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+#header {
+
+  float:left;
+  padding: 10px 10px; 
+  margin-left:1%;  
+}
+
+.header img{
+  height: 100px;
+ width: 100px;
+}
+
+
+*/
+
+
+#logo {
+  top:0;
+  float:left;
+  padding: 10px 10px; 
+  margin-left:-2%;  
+}
+
+#logo img{
+  height: 100px;
+ width: 175px;
+}
+
+
+/*
+
+
+.mainnav nav a{
+  float:right;
+  text-decoration:none; 
+  color:white;
+  font-size:18px; 
+  padding: 20px 30px; 
+  display:inline-block; 
+  transition: all 0.5s ease 0s;
+}
+
+
+.mainnav{
+  overflow:hidden;
+  background-image: linear-gradient(-90deg,  #48D1CC ,#F5DEB3);
+  width:100%; 
+  height: 25px;
+  color:white; 
+  top:0px;
+
+}
+
+.mainnav nav{
+  margin-right:10%;
+}
+*/
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 20px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  height: 50px;
+  overflow: hidden;
+ background-image: linear-gradient(-90deg,  #F0FFF0,#48D1CC ,#F5DEB3);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 17px;
+  padding: 10px 25px;
+  letter-spacing: 1px;
+  font-family: "Segoe UI",Arial,sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar  img  {
+  float: left;
+  display: block;
+  color: white;
+  margin-top: -20%;
+  
+ 
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 60%; /* IE10 */
+  flex: 60%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-left: 10%;
+}
+
+.side button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 88%;
+  font-size: 18px;
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0;
+  background-color: #aaa;
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+  font-family: "sofia";
+  font-style: normal;
+  font-variant: normal;
+  font-size: 16px;
+}
+
+.title {
+  color: White;
+  font-size: 20px;
+
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+
+/* Main column */
+.main {   
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  
+  background-color: white;
+  padding: 10px;
+}
+
+.main .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.main .title {
+  color: grey;
+  font-size: 18px;
+}
+
+.main .card button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.main a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+#profile {
+  top:0;
+  float:right;
+  padding: 1px 1px; 
+  margin-right:-2%;  
+}
+
+#profile img{
+  height: 100px;
+ width: 115px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 180px;
+  position: fixed !important;
+  z-index: 1;
+  top: 52px;
+  left: 0;
+ overflow: auto;
+ overflow-y:scroll;
+  background-image: linear-gradient(-90deg,  #808080 ,#696969,#808080,#696969);
+  /* Disable horizontal scroll */
+}
+
+
+  .sidenav h3{
+    text-align: center;
+     font-family: "sofia";
+
+  }
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+ font-size:18px; 
+  font-family: "sofia";
+  font-style: normal;
+  font-variant: normal;
+ text-transform: capitalize;
+ color: black;
+  display: block;
+}
+
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+/*
+_______________________________________________________________________________________________________________________________________________-*/
+/* Style The Dropdown Button in side bar */
+.dropbtn {
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown button{
+   background-image: linear-gradient(-90deg,  #808080 ,#696969,#808080,#696969);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color:black;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/*______________________________________________________________________________________________________________*/
+
+/*Main Content Part */
+
+/*--------------------------------------------------------------------------------------------*/
+.mainContent {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-left: 13%;
+    min-height: calc(77vh - 103px);
+}
+
+
+
+.mainContent h2{
+    border-bottom: 1px solid grey;
+    padding-bottom:10px;
+    margin-left: 2%;
+    font-family: 'Shadows Into Light', cursive;
+    margin-bottom: 20px
+}
+
+div {
+  border-radius: 5px;
+ 
+ 
+}
+.mainContent .w3-button{
+    
+ margin-left: 17%;
+display: inline-block;
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+    
+}
+.createbtn {
+ 
+  padding: 10px 15px;
+  margin-left: 3%;
+   display: flex;
+ text-align: center;
+  text-decoration: none;
+  outline: none;
+
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  cursor: pointer;
+   background-color:#48D1CC ; 
+}
+.createbtn:hover{
+  background-color: pink;
+
+}
+.createbtn:active {
+  background-color: skyblue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.mainContent li{
+  display: flex;
+   
+
+}
+
+.w3-bar {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mainContent li{
+   display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mainContent .w3-button:hover {background-color: #3e8e41}
+
+.mainContent .w3-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+.mainContent form input[type=text], select {
+  width: 50%;
+  padding: 10px 15px;
+  margin: 5px 0;
+   display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.mainContent form input[type=submit] {
+   width: 20%;
+  padding: 10px 15px;
+  margin-left: 65%;
+   display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+   background-color: #3e8e41; 
+}
+.mainContent form input[type=date] {
+  width: 50%;
+  padding: 10px 15px;
+  margin: 5px 0;
+   display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.mainContent form input[type=file] {
+  width: 50%;
+  padding: 10px 15px;
+  margin: 5px 0;
+   display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; 
+}
+
+
+.mainContent form label {
+    display: flex;
+    font-size: 18px;
+    padding: 10px 15px;
+    font-style: normal;
+    font-variant: normal;
+}
+
+.mainContent form input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.assingment {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/*-------------------------------------------------------------------------------------*/
+
+
+/*For The Search Button*/
+
+
+/*----------------------------------------*/
+ .search-container input[type=text] {
+ padding: 6px;
+  margin-top: 6px;
+  font-size: 17px;
+  border: none;
+ 
+  
+}
+.search-container button {
+  
+  padding: 6px 10px;
+  margin-top: 6px;
+  margin-left:  5%;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.search-container button:hover {
+  background: #ccc;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.overlay {
+  position: absolute; 
+  background: black;
+  background: black;/* Black see-through */
+  color: #f1f1f1; 
+  width: 15%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  text-align: left;
+}
+
+/*------------------------------------------------------------------------------*/
+/*for Coloumn */
+.column:hover .overlay {
+  opacity: 1;
+}
+
+/* Clearfix (clear floats) */
+.cccc::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.column .textContent{
+position: relative;
+background: rgb(0, 0, 0); /* Fallback color */
+background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  
+}
+/* ________________________________________________________________________________________________*/
+/*Table Format */
+/*----------------------------------------------------------------------------------------------------------------*/
+#classroom-table {
+  font-family: "sofia";
+  font-style: normal;
+  font-variant: normal;
+  width: 85%;
+  margin-top: 2%;
+  border-collapse: collapse;
+  margin-left: 5%;
+
+}
+
+#classroom-table td, #classroom-table th {
+  text-align: center;
+  font-size: 18px;
+  padding: 7px;
+}
+
+#classroom-table tr:nth-child(even){background-color: #808080;}
+#classroom-table tr:nth-child(odd){background-color: #ddd;}
+
+#classroom-table tr:hover {background-color: #B0E0E6;}
+
+#classroom-table th {
+  text-align: center;
+  background-color: #20B2AA;
+  font-size: 20px;
+  color: white;
+}
+
+
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+

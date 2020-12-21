@@ -1,0 +1,1 @@
+enum AppState { SPLASH_SCREEN, LOGIN, APP }

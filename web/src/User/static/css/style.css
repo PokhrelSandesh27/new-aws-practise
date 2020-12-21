@@ -1,0 +1,371 @@
+.page-content {
+    position: relative;
+    min-height: calc(130vh - 120px);
+    padding: 30px;
+    color:  #171616;
+    background: #f0f1f6;
+}
+.page-content {
+
+    padding: 10px;
+}
+select{
+    display: flex;
+    width: 80%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 15px;
+    margin-left: 1%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.page-content h2{
+    border-bottom: 1px solid grey;
+    padding-bottom:10px;
+    margin-left: 2%;
+    font-family: 'Shadows Into Light', cursive;
+    margin-bottom: 20px
+}
+.form label {
+    display: flex;
+    font-size: 18px;
+    padding: 10px 15px;
+    font-style: normal;
+    font-variant: normal;
+}
+label {
+    display: flex;
+    font-size: 12px;
+    padding: 10px 15px;
+    font-style: normal;
+    font-variant: normal;
+}
+input{
+    width: 40%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.btn{
+    width: 20%;
+    margin-left: 2%;
+       background-color: #20B2AA;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+
+}
+.btn:hover{
+    background-color: #45a049;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    background-color: #666666;
+    margin-left: 8%;
+    color: #f1f1f1;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+    font-size: 12px;
+
+}
+.Create {
+    margin-left: 8%;
+    color: #f1f1f1;
+    font-size: 12px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+
+}
+
+.close:hover,
+.close:focus,
+.close:active{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.Create:hover,
+.Create:focus,
+Create:active{
+    color: #000;
+
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.card {
+    box-shadow: 0 4px 8px 0;
+    background-color: #fff;
+    max-width: 120%;
+    padding: 15px;
+    max-height: 100%;
+    margin-left: 7%;
+}
+.column .card .container img{
+    margin-top: 2%;
+    border-radius: 50%;
+    max-width: 72%;
+
+}
+
+.card2{
+    background-color: #fff;
+    width: 100%;
+    font-size: 14px;
+}
+
+.column {
+    float: left;
+    width: 45%;
+    padding: 10px 15px;
+    gap: 5%;
+}
+
+
+.column4 {
+    float: left;
+    width: 70%;
+    padding: 7px 10px;
+
+}
+
+.column5 {
+   display: flex;
+   justify-content: space-between;
+    width: 100%;
+
+
+}
+.column2 {
+    float: left;
+    width: 55%;
+    padding: 10px 15px;
+    gap: 5%;
+}
+.column3 {
+    float: left;
+    width: 55%;
+    padding: 10px 15px;
+    gap: 5%;
+}
+.CardIn{
+    box-shadow: 0 4px 8px 0;
+    background-color: #FFFFFF;
+   width: 100%;
+    padding: 10px;
+    border-left:.25rem solid greenyellow !important;
+    text-align: center;
+    font-family: "sofia";
+    font-style: normal;
+    font-variant: normal;
+    font-size: 16px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.Data {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.Data td, th {
+
+    text-align: left;
+    padding: 22px;
+}
+
+.nextTable{
+    margin-left: 3%;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #4a4a4d;
+    font: 13px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.nextTable th,
+td {
+    padding: 10px 13px;
+    vertical-align: middle;
+
+}
+.nextTable thead {
+    background: #395870;
+    color: #fff;
+}
+.nextTable th {
+    font-weight: bold;
+    background-color:  #4D6875;
+    text-align: center;
+
+}
+.nextTable th:first-child {
+    text-align: left;
+}
+.nextTable tbody tr:nth-child(even) {
+    background: #f0f0f2;
+}
+.nextTable td {
+    border-bottom: 1px solid #cecfd5;
+    border-right: 1px solid #cecfd5;
+}
+.nextTable td:first-child {
+    border-left: 1px solid #cecfd5;
+}
+
+
+
+
+.img-wrap{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.img-upload:before{
+    content: "➕";
+    font-size: 50px;
+    position: absolute;
+    padding-top: 10px;
+    transform: translate(-20%, -10%);
+    text-align: center;
+    color: #1abc9c;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .2s ease;
+    background-color: #f0f0f2;
+}
+.img-upload:hover:before{
+    opacity: 50%;
+}
+
+.custom-file-upload {
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    padding: 6px;
+    cursor: pointer;
+
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 800px) {
+
+    .column {
+        width: 100%;
+        padding: 0px 0px;
+        gap: 0%;
+    }
+    .column2 {
+        margin-top: 5%;
+        width: 100%;
+        padding: 0px 0px;
+        gap: 0%;
+    }
+
+    .column3 {
+        float: left;
+        width: 103%;
+        padding: 0px 0px;
+        margin-top: 8%;
+    }
+    .column4 {
+        width: 100%;
+        height: 100%;
+        padding: 0px 0px;
+        margin-top: 8%;
+    }
+    .CardInfo{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column2 tr{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+
+/*@media screen and (max-width: 600px) {*/
+/*     tr{*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        flex-wrap: wrap;*/
+/*    }*/
+/*}*/
+
+
+
+
+
+
+
+
+
+.userimg {
+    width: 100%;
+    border-radius: 10%;
+    fill: #CCCCCC;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

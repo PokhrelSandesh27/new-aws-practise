@@ -1,0 +1,35 @@
+const { Attendance } = require('../models/attendance')
+//1. arr of data
+// 2. link with id
+
+const data = [
+    {
+        "_id": "5f7fc34ed61b73232a14436c",
+        "user": "5f16e39ce90c0a3ce036206a",
+        "classroom":"5ee454d1e777062dd82ba898",
+        "dateTime": 1577836800040,
+        "isPresent": true
+    },
+    {
+        "_id": "5f7fc34ed61b73232a14436d",
+        "user": "5f16e39ce90c0a3ce036206a",
+        "classroom":"5ee454d1e777062dd82ba898",
+        "dateTime": 1577836800060,
+        "isPresent": true
+    },
+    {
+        "_id": "5f7fc34ed61b73232a14436e",
+        "user": "5f16e39ce90c0a3ce036206a",
+        "classroom":"5ee454d1e777062dd82ba898",
+        "dateTime": 1577836800500,
+        "isPresent": true
+    },
+    {
+        "_id": "5f7fc34ed61b73232a14436f",
+        "user": "5f16e39ce90c0a3ce036206a",
+        "dateTime": 1577836801000,
+        "isPresent": true
+    }
+]
+exports.model = Attendance
+exports.data = data

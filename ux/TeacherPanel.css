@@ -1,0 +1,470 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/*------------------------------*/
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+/*------------------------------*/
+
+
+
+
+
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+/*.header {
+  padding: 10px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+#header {
+
+  float:left;
+  padding: 10px 10px; 
+  margin-left:1%;  
+}
+
+.header img{
+  height: 100px;
+ width: 100px;
+}
+
+
+*/
+
+
+#logo {
+  top:0;
+  float:left;
+  padding: 10px 10px; 
+  margin-left:-2%;  
+}
+
+#logo img{
+  height: 100px;
+ width: 175px;
+}
+
+
+/*
+
+
+.mainnav nav a{
+  float:right;
+  text-decoration:none; 
+  color:white;
+  font-size:18px; 
+  padding: 20px 30px; 
+  display:inline-block; 
+  transition: all 0.5s ease 0s;
+}
+
+
+.mainnav{
+  overflow:hidden;
+  background-image: linear-gradient(-90deg,  #48D1CC ,#F5DEB3);
+  width:100%; 
+  height: 25px;
+  color:white; 
+  top:0px;
+
+}
+
+.mainnav nav{
+  margin-right:10%;
+}
+*/
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 20px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  height: 50px;
+  overflow: hidden;
+ background-image: linear-gradient(-90deg,  #F0FFF0,#48D1CC ,#F5DEB3);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 17px;
+  padding: 10px 25px;
+  letter-spacing: 1px;
+  font-family: "Segoe UI",Arial,sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar  img  {
+  float: left;
+  display: block;
+  color: white;
+  margin-top: -20%;
+  
+ 
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 60%; /* IE10 */
+  flex: 60%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-left: 10%;
+}
+
+.side button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 88%;
+  font-size: 18px;
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0;
+  background-color: #aaa;
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+  font-family: "sofia";
+  font-style: normal;
+  font-variant: normal;
+  font-size: 16px;
+}
+
+.title {
+  color: White;
+  font-size: 20px;
+
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+
+/* Main column */
+.main {   
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  
+  background-color: white;
+  padding: 10px;
+}
+
+.main .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.main .title {
+  color: grey;
+  font-size: 18px;
+}
+
+.main .card button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.main a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+#profile {
+  top:0;
+  float:right;
+  padding: 1px 1px; 
+  margin-right:-2%;  
+}
+
+#profile img{
+  height: 100px;
+ width: 115px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed !important;
+  z-index: 1;
+  top: 52px;
+  left: 0;
+ overflow: auto;
+ overflow-y:scroll;
+  background-image: linear-gradient(-90deg,  #808080 ,#696969,#808080,#696969);
+  /* Disable horizontal scroll */
+}
+
+
+  .sidenav h3{
+    text-align: center;
+     font-family: "sofia";
+
+  }
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+ font-size:18px; 
+  font-family: "sofia";
+  font-style: normal;
+  font-variant: normal;
+ text-transform: capitalize;
+ color: black;
+  display: block;
+}
+
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+
+
+/*--------------------------------------------------------------------------------------------*/
+.mainContent {
+  -ms-flex: 60%; /* IE10 */
+  flex: 60%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-left: 10%;
+}
+
+.mainContent form input[type=text], select {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.mainContent h2{
+  border-bottom: 1px solid grey;
+  padding-bottom:10px;
+  margin-left: 2%;
+  font-family: 'Shadows Into Light', cursive;
+  margin-bottom: 20px
+}
+
+
+.mainContent form label {
+ font-size: 18px;
+ padding: 10px 15px;
+ font-family: "sofia";
+  font-style: normal;
+  font-variant: normal;
+}
+
+.mainContent form input[type=Date], select {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+
+.mainContent form input[type=submit] {
+  width: 20%;
+  background-color: #20B2AA;
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.mainContent form input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+ 
+}
+form{
+ width: 55%;
+ height: 100%;
+ margin-left: 3%;
+ margin-right: 10%;
+ margin-top: 3%;
+}
+
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}

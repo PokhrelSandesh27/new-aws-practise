@@ -1,0 +1,58 @@
+version: '3'
+services:
+  letsencrypt:
+    image: linuxserver/letsencrypt
+    container_name: letsencrypt
+    environment: 
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - URL=everestwalk.com 
+      - SUBDOMAINS=wildcard
+      - VALIDATION=dns
+      - DNSPLUGIN=route53
+      - EMAIL=everestwalk123@gmail.com
+      - DHLEVEL=4096
+    volumes: 
+      - /ams-master/config:/config 
+  nginx:
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports: 
+      - "3050:80"
+    depends_on:
+      - api
+      - client 
+  db:
+    restart: unless-stopped
+    image: 'mongo:latest'
+    ports: 
+      - 27017:27017
+    volumes: 
+      - /data:/data/db
+  client:
+    container_name: client
+    stdin_open: true
+    build: 
+      dockerfile: Dockerfile
+      context: ./web
+  api:
+    container_name: api
+    build: 
+      dockerfile: Dockerfile
+      context: ./server
+  mongo-seed:
+    image: mongo:3.2.6
+    #links:
+    #  - db
+    build: 
+      dockerfile: Dockerfile
+      context: ./mongo-seed
+  
+  
+  
+    
+
+    

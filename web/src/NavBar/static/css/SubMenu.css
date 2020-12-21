@@ -1,0 +1,112 @@
+.submenu {
+    margin-left: 16.2%;
+    overflow: hidden;
+    background-color: #d8dff9;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 1px 2px 0;
+}
+
+/* Style the navigation bar links */
+.submenu a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.submenu  img {
+    float: left;
+    display: block;
+    color: white;
+    margin-top: -20%;
+
+
+}
+
+
+/* Right-aligned link */
+.submenu a.right {
+    float: right;
+    height: 60px;
+}
+
+
+/* Change color on hover */
+.submenu  a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Active/current link */
+.submenu a.active {
+    background-color: #666;
+    color: white;
+
+}
+
+
+#logo {
+    top:0;
+    float:left;
+    padding: 10px 10px;
+    margin-left:-2%;
+    width: 175px;
+}
+
+#logo a{  /* The logo is in SVG format */
+    display: block;
+    margin: auto 0;
+    /*height: 100px;*/
+    /*width: 175px;*/
+}
+
+#profile {
+    top:0;
+    float:right;
+    padding: 1px 15px;
+    margin-right:-2%;
+    margin-top: 2%;
+    vertical-align: middle;
+    width: 100px;
+    height:10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#profile img{
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+    vertical-align: middle;
+    background-color: #d8dff9;
+}
+
+
+@media screen and (max-width: 600px) {
+    .submenu a:not(:first-child) {display: none;}
+    .submenu a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .submenu.responsive .icon {
+        position: absolute;
+        right: 0;
+        bottom:0;
+    }
+    .submenu.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+}
+

@@ -1,0 +1,426 @@
+.mainContent {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-left: 10%;
+}
+select{
+    display: flex;
+    width: 80%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 15px;
+    margin-left: 1%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.mainContent h2{
+    border-bottom: 1px solid grey;
+    padding-bottom:10px;
+    margin-left: 2%;
+    font-family: 'Shadows Into Light', cursive;
+    margin-bottom: 20px
+}
+.form label {
+    display: flex;
+    font-size: 18px;
+    padding: 10px 15px;
+    font-style: normal;
+    font-variant: normal;
+}
+label {
+    display: flex;
+    font-size: 18px;
+    padding: 10px 15px;
+    font-style: normal;
+    font-variant: normal;
+}
+input{
+    width: 80%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/*.mainContent form input[type=submit] {*/
+/*    width: 20%;*/
+/*    background-color: #20B2AA;*/
+/*    color: white;*/
+/*    padding: 10px 15px;*/
+/*    margin: 8px 0;*/
+/*    border: none;*/
+/*    border-radius: 4px;*/
+/*    cursor: pointer;*/
+/*}*/
+.btn{
+    width: 30%;
+    margin-left: 40%;
+    background-color: #20B2AA;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+
+}
+.btn:hover{
+    background-color: #45a049;
+}
+/*button {*/
+/*    width: 20%;*/
+/*    margin-left: 60%;*/
+/*    background-color: #20B2AA;*/
+/*    color: white;*/
+/*    padding: 10px 15px;*/
+/*    border: none;*/
+/*    border-radius: 4px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+
+/*.myTimetable {*/
+/*    width: 80%;*/
+/*    margin-left: 10%;*/
+/*    border-collapse: collapse;*/
+/*    table-layout: fixed;*/
+/*}*/
+
+/*.myTimetable thead{*/
+/*    color: #FFFFFF;*/
+/*    padding: 6%;*/
+/*}*/
+/*.myTimetable th{*/
+/*    border: 1px solid black;*/
+/*    padding: 6px;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.myTimetable tbody {*/
+/*    background-color: #AAAAFF;*/
+/*}*/
+
+/*.myTimetable td {*/
+/*    border: 1px solid black;*/
+/*    padding: 6px;*/
+/*    text-align: center;*/
+/*}*/
+/*.myTimetable tbody tr td:first-child {*/
+/*    background-color: #E0FFFF;*/
+
+/*}*/
+
+
+
+.TimeTable {
+    font-size: 18px;
+    width: 98%;
+   margin: 1%;
+    border-collapse: separate;
+    /*background: url(https://i.stack.imgur.com/P56gr.jpg);*/
+    /*background:url('../ux/Template/img/E-learning.png');*/
+    /*background-repeat:no-repeat;*/
+
+
+}
+
+.TimeTable td, .TimeTable th {
+    text-align: center;
+    font-size: 14px;
+    padding: 13px;
+    cursor: pointer;
+
+
+}
+
+.TimeTable  td:first-child{background-color: #d8dff9;
+    border: none;
+    border-top: 5px solid transparent;
+    border-right: 15px solid #555;
+    border-bottom: 5px solid transparent;
+    width: 0;
+    height: 0;
+
+
+}
+.TimeTable tr:nth-child(even){background-color: #aaaaaa;
+    border-radius: 20px;}
+.TimeTable tr:nth-child(odd){background-color: #ddd;
+    border-radius: 20px;}
+
+.TimeTable tr:hover {background-color: #B0E0E6;}
+
+.TimeTable th {
+    /* padding-top: 12px;
+     padding-bottom: 12px;*/
+    text-align: center;
+    background-color: #455568E6;
+    font-size: 16px;
+    color: white;
+}
+
+
+
+.break, .lunch {
+    background-color: #FF0066 !important;
+    font-style: italic;
+}
+
+.subject {
+    font-size: 12pt;
+    margin-bottom:4px;
+}
+
+.room {
+    font-size: 10pt;
+    font-style: italic;
+}
+
+.CellWithComment{
+    position:relative;
+}
+
+.CellComment{
+    display:none;
+    position:absolute;
+    z-index:100;
+    width: 20%;
+    margin-left: 60%;
+    background-color: #20B2AA;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    top:20px;
+    left:20px;
+}
+
+ button.CellComment{
+    display:block;
+}
+CellWithComment:hover button.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    background-color: #666666;
+    margin-left: 8%;
+    color: #f1f1f1;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+    font-size: 12px;
+
+}
+.Create {
+    margin-left: 8%;
+    color: #f1f1f1;
+    font-size: 12px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+
+}
+
+.close:hover,
+.close:focus,
+.close:active{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.Create:hover,
+.Create:focus,
+Create:active{
+    color: #000;
+
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+
+
+
+
+
+
+
+
+
+@media  screen and (max-width: 800px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    /* Force table to not be like tables anymore */
+    .TimeTable,.TimeTable thead,.TimeTable tbody,.TimeTable th,.TimeTable td,
+    .TimeTable{
+        border-collapse: separate;
+    }
+    .TimeTable tr {
+        display: block;
+    }
+
+    .TimeTable  td:first-child{background-color: inherit;
+        border: 1px solid;
+        border-top: 1px  transparent;
+        border-right: 0px solid #555;
+        border-bottom: 0px solid transparent;
+        width: 50px;
+        height: 0;
+
+
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .TimeTable  thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .TimeTable tr { border: 1px solid #FFFFFF; }
+
+
+    .TimeTable  td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .TimeTable  td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 12px;
+        left:11px;
+        width: 25%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    /*
+    Label the data
+    */
+    .TimeTable td:nth-of-type(1):before { content: "Time";
+
+    }
+    .TimeTable td:nth-of-type(2):before { content: "Sunday"; }
+    .TimeTable td:nth-of-type(3):before { content: "Monday"; }
+    .TimeTable td:nth-of-type(4):before { content: "Tuesday"; }
+    .TimeTable td:nth-of-type(5):before { content: "Wednesday"; }
+    .TimeTable td:nth-of-type(6):before { content: "Thrusday"; }
+    .TimeTable td:nth-of-type(7):before { content: "Friday"; }
+    .TimeTable td:nth-of-type(8):before { content: "Saturday"; }
+
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    .TimeTable {
+        border: 0;
+    }
+
+    .TimeTable caption {
+        font-size: 1.3em;
+    }
+
+    .TimeTable thead {
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .TimeTable tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    .TimeTable td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 12px;
+        text-align: right;
+    }
+
+
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    TimeTable td:nth-of-type(2):before { content: "Sunday"; }
+    .TimeTable td:nth-of-type(3):before { content: "Monday"; }
+    .TimeTable td:nth-of-type(4):before { content: "Tuesday"; }
+    .TimeTable td:nth-of-type(5):before { content: "Wednesday"; }
+    .TimeTable td:nth-of-type(6):before { content: "Thrusday"; }
+    .TimeTable td:nth-of-type(7):before { content: "Friday"; }
+    .TimeTable td:nth-of-type(8):before { content: "Saturday"; }
+
+    .TimeTable td::before {
+        float: left;
+        font-weight: lighter;
+        font-size: 12px;
+        text-transform: uppercase;
+
+
+    }
+
+    .TimeTable td:last-child {
+        border-bottom: 0;
+    }
+}
+
+
+
+
+
+

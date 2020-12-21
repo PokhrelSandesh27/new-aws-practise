@@ -1,0 +1,4233 @@
+{
+	"info": {
+		"_postman_id": "92ec12c8-79e0-41bd-8289-383f97672f6b",
+		"name": "ams",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "book",
+			"item": [
+				{
+					"name": "Get all books",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiU1RVREVOVCJdLCJfaWQiOiI1ZWNlYTUyYjQ3ZTY1OTMwM2M4NmJjNzYiLCJ1c2VybmFtZSI6IlByYWp3YWwxIiwiaWF0IjoxNTkwNjAxMTAzfQ.h5-85-_ab0Pj04okAHyzFSHWx35hianAlvgFBkkRJow",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Hello\",\n\t\"subtitle\":\"hello\",\n\t\"author\":\"Prajwal\",\n\t\"description\":\"This is a book\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/books/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"The best\",\n\t\"subtitle\":\"This is a subtitle\",\n\t\"description\":\"book description\",\n\t\"author\":\"Ram Gopal\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/books/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload an Book",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZjE2ZTM5Y2U5MGMwYTNjZTAzNjIwNmQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJjcmVhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJ1cGRhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJpYXQiOjE1OTc1NDExOTN9.f-4_TIl1Id91J-VCKg4XfTBfmjJ8Ma4QvJ9x-T7ZSw8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "classroom",
+									"value": "5ee454d1e777062dd82ba898",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "5f290e21903f7c362097183a",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "teacher",
+									"value": "5f16e39ce90c0a3ce036206d",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "topic",
+									"value": "Home work",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "This is a practice exercise",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/prajwal/Desktop/ams/ops/postman/ams-dev.postman_environment.json"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/books/5f38f9a579b22863c7957a79/upload/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"5f38f9a579b22863c7957a79",
+								"upload",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a book detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzE2NzB9.tzxjtUKFpGxwq3b7cpXf6lKZJ9Uu0vLAgT5cw4YDXvI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/books/read/5f38f9a579b22863c7957a79",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"read",
+								"5f38f9a579b22863c7957a79"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search a book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"author\":\"Ram\",\n    \"name\":\"pra\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/books/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload an Book Cover",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTElCUkFSSUFOIl0sIl9pZCI6IjVmMTZlMzllZTkwYzBhM2NlMDM2MjA2NiIsInVzZXJuYW1lIjoibGliXzAwMSIsImN1cnJlbnRBZGRyZXNzIjoiTmVwYWwiLCJwZXJtYW5lbnRBZGRyZXNzIjoiTmVwYWwiLCJwaG9uZSI6Iis5Nzc5ODQxNDY0NzI3IiwiZW1haWwiOiJwcmFqd2FsZ2FqdXJlbEBvdXRsb29rLmNvbSIsImZhdGhlck5hbWUiOiJ0ZXN0ZWUiLCJtb3RoZXJOYW1lIjoidGVzdGVlIiwiY3JlYXRlZEF0IjoiMjAyMC0wOC0yOVQwODoxMDoyOS41MThaIiwidXBkYXRlZEF0IjoiMjAyMC0wOC0zMFQwOToxODo1Ny4zMDdaIiwicGhvdG8iOiJodHRwczovL2V2ZXJlc3R3YWxrLXBob3Rvcy5zMy5hcC1zb3V0aC0xLmFtYXpvbmF3cy5jb20vMTU5ODc3OTEzNzIwMS5qcGciLCJpYXQiOjE1OTg5NDAyNjd9.MfYYL_hUBiF6qLRnAPYvHBi_A0WnYYNh5AcQ7SRvaNw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "classroom",
+									"value": "5ee454d1e777062dd82ba898",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "5f290e21903f7c362097183a",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "teacher",
+									"value": "5f16e39ce90c0a3ce036206d",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "topic",
+									"value": "Home work",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "This is a practice exercise",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/prajwal/Downloads/siriskophool.jpg"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/books/5f38f9a579b22863c7957a7a/uploadcover/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"5f38f9a579b22863c7957a7a",
+								"uploadcover",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "alumni",
+			"item": [
+				{
+					"name": "Get all alumni",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiU1RVREVOVCJdLCJfaWQiOiI1ZWNlYTUyYjQ3ZTY1OTMwM2M4NmJjNzYiLCJ1c2VybmFtZSI6IlByYWp3YWwxIiwiaWF0IjoxNTkwNjAxMTAzfQ.h5-85-_ab0Pj04okAHyzFSHWx35hianAlvgFBkkRJow",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Hello\",\n\t\"subtitle\":\"hello\",\n\t\"author\":\"Prajwal\",\n\t\"description\":\"This is a book\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/alumni/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"alumni",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Alumni",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"Ramesh\",\n\t\"lastName\":\"Sharma\",\n\t\"description\":\"...\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/alumni/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"alumni",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload an Alumni Photo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZjE2ZTM5Y2U5MGMwYTNjZTAzNjIwNmQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJjcmVhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJ1cGRhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJpYXQiOjE1OTc1NDExOTN9.f-4_TIl1Id91J-VCKg4XfTBfmjJ8Ma4QvJ9x-T7ZSw8"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "classroom",
+									"value": "5ee454d1e777062dd82ba898",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "5f290e21903f7c362097183a",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "teacher",
+									"value": "5f16e39ce90c0a3ce036206d",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "topic",
+									"value": "Home work",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "This is a practice exercise",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/prajwal/Downloads/zen-509371_1920.jpg"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/alumni/5fc35aa35e9acc437d20ac28/upload/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"alumni",
+								"5fc35aa35e9acc437d20ac28",
+								"upload",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a alumni detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzE2NzB9.tzxjtUKFpGxwq3b7cpXf6lKZJ9Uu0vLAgT5cw4YDXvI"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/alumni/read/5f38f9a579b22863c7957a79",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"alumni",
+								"read",
+								"5f38f9a579b22863c7957a79"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search a alumni",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"author\":\"Ram\",\n    \"name\":\"pra\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/alumni/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"alumni",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0960124f-d792-43ea-95c6-8bb7bce01adb",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "8bff7efe-0269-45a8-a6dc-13766fad4d47",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "book Issues",
+			"item": [
+				{
+					"name": "Get all book issues",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiU1RVREVOVCJdLCJfaWQiOiI1ZWNlYTUyYjQ3ZTY1OTMwM2M4NmJjNzYiLCJ1c2VybmFtZSI6IlByYWp3YWwxIiwiaWF0IjoxNTkwNjAxMTAzfQ.h5-85-_ab0Pj04okAHyzFSHWx35hianAlvgFBkkRJow"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/book-issues/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"book-issues",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Book Issue",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTElCUkFSSUFOIl0sIl9pZCI6IjVmMTZlMzllZTkwYzBhM2NlMDM2MjA2NiIsInVzZXJuYW1lIjoibGliXzAwMSIsImN1cnJlbnRBZGRyZXNzIjoiTmVwYWwiLCJwZXJtYW5lbnRBZGRyZXNzIjoiTmVwYWwiLCJwaG9uZSI6Iis5Nzc5ODQxNDY0NzI3IiwiZW1haWwiOiJwcmFqd2FsZ2FqdXJlbEBvdXRsb29rLmNvbSIsImZhdGhlck5hbWUiOiJ0ZXN0ZWUiLCJtb3RoZXJOYW1lIjoidGVzdGVlIiwiY3JlYXRlZEF0IjoiMjAyMC0xMC0xMVQwNDo0NzoyNC45MjRaIiwidXBkYXRlZEF0IjoiMjAyMC0xMC0xMVQwNDo0NzoyNC45MjRaIiwiaWF0IjoxNjAyNzY3NTc3fQ.OB7FLJbDPEFUkBAb5GI6SsWkTWnHfTSyd1sKmmNdDlY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\":\"5f16e39ce90c0a3ce036206a\",\n\t\"book\":\"5f38f9a579b22863c7957a79\",\n\t\"issueDate\":1602767636\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/book-issues/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"book-issues",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a book issue detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzE2NzB9.tzxjtUKFpGxwq3b7cpXf6lKZJ9Uu0vLAgT5cw4YDXvI"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/book-issues/read/5f884b4e7108fb3959bf8a3b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"book-issues",
+								"read",
+								"5f884b4e7108fb3959bf8a3b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search a book issue",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\":\"123\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/book-issues/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"book-issues",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Issue a book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTElCUkFSSUFOIl0sIl9pZCI6IjVmMTZlMzllZTkwYzBhM2NlMDM2MjA2NiIsInVzZXJuYW1lIjoibGliXzAwMSIsImN1cnJlbnRBZGRyZXNzIjoiTmVwYWwiLCJwZXJtYW5lbnRBZGRyZXNzIjoiTmVwYWwiLCJwaG9uZSI6Iis5Nzc5ODQxNDY0NzI3IiwiZW1haWwiOiJwcmFqd2FsZ2FqdXJlbEBvdXRsb29rLmNvbSIsImZhdGhlck5hbWUiOiJ0ZXN0ZWUiLCJtb3RoZXJOYW1lIjoidGVzdGVlIiwiY3JlYXRlZEF0IjoiMjAyMC0xMC0xMVQwNDo0NzoyNC45MjRaIiwidXBkYXRlZEF0IjoiMjAyMC0xMC0xMVQwNDo0NzoyNC45MjRaIiwiaWF0IjoxNjAyNzY3NTc3fQ.OB7FLJbDPEFUkBAb5GI6SsWkTWnHfTSyd1sKmmNdDlY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\":\"5f16e39ce90c0a3ce036206a\",\n\t\"book\":\"5f38f9a579b22863c7957a79\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/book-issues/issue",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"book-issues",
+								"issue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Return a book",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzE2NzB9.tzxjtUKFpGxwq3b7cpXf6lKZJ9Uu0vLAgT5cw4YDXvI"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/book-issues/5f8ac26981ba89168a589d22/return",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"book-issues",
+								"5f8ac26981ba89168a589d22",
+								"return"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pay Overdue fine",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzE2NzB9.tzxjtUKFpGxwq3b7cpXf6lKZJ9Uu0vLAgT5cw4YDXvI"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/book-issues/5f8db04a9af04122f627a439/pay-overdue-fine",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"book-issues",
+								"5f8db04a9af04122f627a439",
+								"pay-overdue-fine"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "classroom",
+			"item": [
+				{
+					"name": "Create classroom",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzE2NzB9.tzxjtUKFpGxwq3b7cpXf6lKZJ9Uu0vLAgT5cw4YDXvI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"grade\":\"2\",\r\n    \"section\":\"C\",\r\n    \"description\":\"This is 2-C\",\r\n    \"teacher\":\"5ef6bbe625f8355d195a4d54\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/classrooms/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"classrooms",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a classroom detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzE2NzB9.tzxjtUKFpGxwq3b7cpXf6lKZJ9Uu0vLAgT5cw4YDXvI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/classrooms/read/5ef6ca8ac629895c6c1259ea",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"classrooms",
+								"read",
+								"5ef6ca8ac629895c6c1259ea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a classroom",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\"This is an super updated description\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/classrooms/5ef6ca8ac629895c6c1259ea/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"classrooms",
+								"5ef6ca8ac629895c6c1259ea",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a classroom",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/classrooms/5edeee65807c6725682d190d/delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"classrooms",
+								"5edeee65807c6725682d190d",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all classrooms",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3VycmVudEFkZHJlc3MiOiJOZXBhbCIsInBlcm1hbmVudEFkZHJlc3MiOiJOZXBhbCIsInBob25lIjoiKzk3Nzk4NDE0NjQ3MjciLCJlbWFpbCI6InByYWp3YWxnYWp1cmVsQG91dGxvb2suY29tIiwiZmF0aGVyTmFtZSI6InRlc3RlZSIsIm1vdGhlck5hbWUiOiJ0ZXN0ZWUiLCJjcmVhdGVkQXQiOiIyMDIwLTA5LTMwVDE4OjQ3OjE4Ljk4M1oiLCJ1cGRhdGVkQXQiOiIyMDIwLTA5LTMwVDE4OjQ3OjE4Ljk4M1oiLCJpYXQiOjE2MDE0OTE2NDZ9.tt50wUYQSXKt96Wk4VarVUCEWVdJG-bATWPuMo37cX4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/classrooms/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"classrooms",
+								"read"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "meeting",
+			"item": [
+				{
+					"name": "Create a meeting",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classroom\":\"5ee454d1e777062dd82ba898\",\r\n    \"lecture\":\"5ee45bc1d72bbc24389eda44\",\r\n    \"teacher\":\"5f16e39ce90c0a3ce036206d\",\r\n    \"startTime\": 1594734728924\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/meetings/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"meetings",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all meetings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/meetings/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"meetings",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a meeting detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/meetings/read/5ef6d18ec629895c6c1259eb/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"meetings",
+								"read",
+								"5ef6d18ec629895c6c1259eb",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update a meeting",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teacherid\":\"updatedid\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/meetings/5edef69442078c4a3cd12511/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"meetings",
+								"5edef69442078c4a3cd12511",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a meeting",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/meetings/5edef69442078c4a3cd12511/delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"meetings",
+								"5edef69442078c4a3cd12511",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search meeting",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classroom\":\"5ee454d1e777062dd82ba898\",\r\n    \"lecture\": \"5ee45bc1d72bbc24389eda44\",\r\n    \"teacher\": \"5f16e39ee90c0a3ce036206e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/meetings/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"meetings",
+								"search"
+							]
+						},
+						"description": "Every fields are optional"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "questionSet",
+			"item": [
+				{
+					"name": "Create a question set",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"questionSet\": [\r\n            {\r\n                \"questionNumber\": \"q1\",\r\n                \"question\": \"Your question 01 ?\",\r\n                \"options\": [\r\n                    { \"value\": 1, \"display\": \"Answer 01\" },\r\n                    { \"value\": 2, \"display\": \"Answer 02\" },\r\n                    { \"value\": 3, \"display\": \"Answer 03\" },\r\n                    { \"value\": 4, \"display\": \"Answer 04\" }\r\n                ],\r\n                \"correctAnswer\": 2,\r\n                \"studentAnswer\": 0\r\n            },\r\n            {\r\n                \"questionNumber\": \"q2\",\r\n                \"question\": \"Your question 02 ?\",\r\n                \"options\": [\r\n                    { \"value\": 1, \"display\": \"Answer 01\" },\r\n                    { \"value\": 2, \"display\": \"Answer 02\" },\r\n                    { \"value\": 3, \"display\": \"Answer 03\" },\r\n                    { \"value\": 4, \"display\": \"Answer 04\" }\r\n                ],\r\n                \"correctAnswer\": 2,\r\n                \"studentAnswer\": 0\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/questionsets/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"questionsets",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all questionSets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/questionsets/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"questionsets",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a questionset detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/questionsets/read/5f7dceed306417990e9cac4c/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"questionsets",
+								"read",
+								"5f7dceed306417990e9cac4c",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search questionset",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classroom\":\"5ee454d1e777062dd82ba898\",\r\n    \"lecture\": \"5ee45bc1d72bbc24389eda44\",\r\n    \"teacher\": \"5f16e39ee90c0a3ce036206e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/questionsets/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"questionsets",
+								"search"
+							]
+						},
+						"description": "Every fields are optional"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "timetable",
+			"item": [
+				{
+					"name": "Create a timetable",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3JlYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwidXBkYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwiaWF0IjoxNTk4MzUxNDQxfQ.EHg1q_OaSGR18JGb83UcVGEcyLz3XY-j_Uiu07YfWOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subject\":\"5f290e21903f7c362097183a\",\r\n    \"classroom\":\"5ee454d1e777062dd82ba898\",\r\n    \"teacher\":\"5f16e39ee90c0a3ce036206e\",\r\n    \"slot\":\"5f44efdf763202063ffd75b5\",\r\n    \"day\":\"Monday\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/timetables/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"timetables",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all timetables",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjM0Njh9.tZLJfCp1ZfHF8zA5kYbILMAocd6Q0euuLwKC3rrn18M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/timetables/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"timetables",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a timetable details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjQyNjh9.AXwjyaeBXHuITtZ1z5A8Md66qmu6n9eK26JoD5zI-mk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/timetables/read/5ee45bc1d72bbc24389eda44/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"timetables",
+								"read",
+								"5ee45bc1d72bbc24389eda44",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search timetable",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0M2Q4OGNiNDk2YjM1ZGM3MmZiZDkiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMTY0MTB9.Q_B40VUbK9WoXe_6hZA7DXlAp1j4GFQRGrvE42XhcyE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subject\":\"Science\",\r\n    \"classroom\":\"5ee454d1e777062dd82ba898\",\r\n    \"teacher\":\"5f16e39ee90c0a3ce036206e\",\r\n    \"slot\":\"5ee45bc1d72bbc24389eda14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/timetables/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"timetables",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "Create a student",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3VycmVudEFkZHJlc3MiOiJOZXBhbCIsInBlcm1hbmVudEFkZHJlc3MiOiJOZXBhbCIsInBob25lIjoiKzk3Nzk4NDE0NjQ3MjciLCJlbWFpbCI6InByYWp3YWxnYWp1cmVsQG91dGxvb2suY29tIiwiZmF0aGVyTmFtZSI6InRlc3RlZSIsIm1vdGhlck5hbWUiOiJ0ZXN0ZWUiLCJjcmVhdGVkQXQiOiIyMDIwLTA4LTI4VDAzOjQ5OjU3LjY4NFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTA4LTI4VDAzOjQ5OjU3LjY4NFoiLCJpYXQiOjE1OTg1OTc1ODJ9.Jzzl7ioiqU1eSAbsYoQQz8f4WNd5RVx5TKu8YZqgaVA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"student\":\"5f7f2d692fb65f11dd96bf4e\",\r\n    \"classroom\":\"5ee454d1e777062dd82ba898\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/students/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search a student",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"stu_001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/students/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "search a user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3VycmVudEFkZHJlc3MiOiJOZXBhbCIsInBlcm1hbmVudEFkZHJlc3MiOiJOZXBhbCIsInBob25lIjoiKzk3Nzk4NDE0NjQ3MjciLCJlbWFpbCI6InByYWp3YWxnYWp1cmVsQG91dGxvb2suY29tIiwiZmF0aGVyTmFtZSI6InRlc3RlZSIsIm1vdGhlck5hbWUiOiJ0ZXN0ZWUiLCJjcmVhdGVkQXQiOiIyMDIwLTA4LTI4VDAzOjQ5OjU3LjY4NFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTA4LTI4VDAzOjQ5OjU3LjY4NFoiLCJpYXQiOjE1OTg1OTc1ODJ9.Jzzl7ioiqU1eSAbsYoQQz8f4WNd5RVx5TKu8YZqgaVA"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\":\"aj\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"lib_001\",\r\n    \"password\":\"knowispower\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzE2NzB9.tzxjtUKFpGxwq3b7cpXf6lKZJ9Uu0vLAgT5cw4YDXvI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"stu_003\",\r\n    \"password\":\"password\",\r\n    \"fullName\":\"Test Prasad\",\r\n    \"currentAddress\":\"Nepal\",\r\n    \"permanentAddress\":\"Nepal\",\r\n    \"phone\":\"+9779841464727\",\r\n    \"email\":\"prajwalgajurel@outlook.com\",\r\n    \"fatherName\":\"testee\",\r\n    \"motherName\":\"testee\",\r\n    \"status\":\"ACTIVE\",\r\n    \"groups\":[\"STUDENT\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload a profile photo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZjE2ZTM5Y2U5MGMwYTNjZTAzNjIwNmQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJjcmVhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJ1cGRhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJpYXQiOjE1OTc1NDExOTN9.f-4_TIl1Id91J-VCKg4XfTBfmjJ8Ma4QvJ9x-T7ZSw8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "classroom",
+									"value": "5ee454d1e777062dd82ba898",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "5f290e21903f7c362097183a",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "teacher",
+									"value": "5f16e39ce90c0a3ce036206d",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "topic",
+									"value": "Home work",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "This is a practice exercise",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/prajwal/Desktop/ams/ops/postman/ams-dev.postman_environment.json"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users/5f45cf94212d511eee2a188f/upload/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"5f45cf94212d511eee2a188f",
+								"upload",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "assignment",
+			"item": [
+				{
+					"name": "upload an assignment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZjE2ZTM5Y2U5MGMwYTNjZTAzNjIwNmQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJjcmVhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJ1cGRhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJpYXQiOjE1OTc1NDExOTN9.f-4_TIl1Id91J-VCKg4XfTBfmjJ8Ma4QvJ9x-T7ZSw8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "classroom",
+									"value": "5ee454d1e777062dd82ba898",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "5f290e21903f7c362097183a",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "teacher",
+									"value": "5f16e39ce90c0a3ce036206d",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "topic",
+									"value": "Home work",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "This is a practice exercise",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/prajwal/Desktop/ams/ops/postman/ams-dev.postman_environment.json"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/assignments/5f107ed705b3cf1d60820654/upload/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"assignments",
+								"5f107ed705b3cf1d60820654",
+								"upload",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create an assignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZjE2ZTM5Y2U5MGMwYTNjZTAzNjIwNmQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJjcmVhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJ1cGRhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJpYXQiOjE1OTc1NDExOTN9.f-4_TIl1Id91J-VCKg4XfTBfmjJ8Ma4QvJ9x-T7ZSw8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"classroom\":\"5ee454d1e777062dd82ba898\",\n    \"subject\": \"5f290e4be0bf823ec00ede91\",\n    \"teacher\":\"5f16e39ce90c0a3ce036206d\",\n    \"topic\":\"Testing for Anuj\",\n    \"description\":\"This is an assignment for Anuj test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/assignments/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"assignments",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all assignments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/assignments/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"assignments",
+								"read"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a assignment detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzE2NzB9.tzxjtUKFpGxwq3b7cpXf6lKZJ9Uu0vLAgT5cw4YDXvI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/assignments/read/5f38903ed2ec6034532d423e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"assignments",
+								"read",
+								"5f38903ed2ec6034532d423e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search an assignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"subject\": \"5f290e4be0bf823ec00ede91\",\r\n   \"teacher\":\"5f16e39ce90c0a3ce036206d\",\r\n   \"classroom\": \"5ee454d1e777062dd82ba898\",\r\n   \"topic\": \"Drinking \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/assignments/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"assignments",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "presentation",
+			"item": [
+				{
+					"name": "upload a presentation",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZjE2ZTM5Y2U5MGMwYTNjZTAzNjIwNmQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJjcmVhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJ1cGRhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJpYXQiOjE1OTc1NDExOTN9.f-4_TIl1Id91J-VCKg4XfTBfmjJ8Ma4QvJ9x-T7ZSw8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "classroom",
+									"value": "5ee454d1e777062dd82ba898",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "5f290e21903f7c362097183a",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "teacher",
+									"value": "5f16e39ce90c0a3ce036206d",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "topic",
+									"value": "Home work",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "This is a practice exercise",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/prajwal/Desktop/ams/ops/postman/ams-dev.postman_environment.json"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/presentations/5f4646c512dc150565b51828/upload/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"presentations",
+								"5f4646c512dc150565b51828",
+								"upload",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create a presentation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZjE2ZTM5Y2U5MGMwYTNjZTAzNjIwNmQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJjcmVhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJ1cGRhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJpYXQiOjE1OTc1NDExOTN9.f-4_TIl1Id91J-VCKg4XfTBfmjJ8Ma4QvJ9x-T7ZSw8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"classroom\":\"5ee454d1e777062dd82ba898\",\n    \"subject\": \"5f290e4be0bf823ec00ede91\",\n    \"teacher\":\"5f16e39ce90c0a3ce036206d\",\n    \"topic\":\"Eating meat\",\n    \"description\":\"This is a presentation for Eating meat\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/presentations/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"presentations",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all presentations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/presentations/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"presentations",
+								"read"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a presentation detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzE2NzB9.tzxjtUKFpGxwq3b7cpXf6lKZJ9Uu0vLAgT5cw4YDXvI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/presentations/read/5f38bd7a6027e14d72d1e5fd",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"presentations",
+								"read",
+								"5f38bd7a6027e14d72d1e5fd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search a presentation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classroom\": \"5ee454d1e777062dd82ba898\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/presentations/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"presentations",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "assignment Submissions",
+			"item": [
+				{
+					"name": "upload an assignment Submission",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZjE2ZTM5Y2U5MGMwYTNjZTAzNjIwNmQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJjcmVhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJ1cGRhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJpYXQiOjE1OTc1NDExOTN9.f-4_TIl1Id91J-VCKg4XfTBfmjJ8Ma4QvJ9x-T7ZSw8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "classroom",
+									"value": "5ee454d1e777062dd82ba898",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "5f290e21903f7c362097183a",
+									"type": "text"
+								},
+								{
+									"key": "teacher",
+									"value": "5f16e39ce90c0a3ce036206d",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "topic",
+									"value": "Home work",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "This is a practice exercise",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/prajwal/Desktop/ams/ops/postman/ams-dev.postman_environment.json"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/assignmentsubmissions/5f39f53cca817b238eb95618/upload/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"assignmentsubmissions",
+								"5f39f53cca817b238eb95618",
+								"upload",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create an assignment submission",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZjE2ZTM5Y2U5MGMwYTNjZTAzNjIwNmQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJjcmVhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJ1cGRhdGVkQXQiOiIyMDIwLTA4LTE2VDAxOjI1OjMzLjg2NloiLCJpYXQiOjE1OTc1NDExOTN9.f-4_TIl1Id91J-VCKg4XfTBfmjJ8Ma4QvJ9x-T7ZSw8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"assignment\":\"5f107ed705b3cf1d60820654\",\n    \"student\": \"5f16e39ce90c0a3ce036206a\",\n    \"description\":\"This is an assignment submission for Drinking water\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/assignmentsubmissions/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"assignmentsubmissions",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all assignment submissions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/assignmentsubmissions/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"assignmentsubmissions",
+								"read"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a assignment submission detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzE2NzB9.tzxjtUKFpGxwq3b7cpXf6lKZJ9Uu0vLAgT5cw4YDXvI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/assignmentsubmissions/read/5f38aadd589425436d6efc6a",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"assignmentsubmissions",
+								"read",
+								"5f38aadd589425436d6efc6a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search an assignment submissions",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"assignment\": \"5f38903ed2ec6034532d423e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/assignmentsubmissions/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"assignmentsubmissions",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "slot",
+			"item": [
+				{
+					"name": "Create a slot",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3JlYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwidXBkYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwiaWF0IjoxNTk4MzUxNDQxfQ.EHg1q_OaSGR18JGb83UcVGEcyLz3XY-j_Uiu07YfWOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"S-7\",\r\n    \"startTime\":900,\r\n    \"endTime\":930\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/slots/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"slots",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all slots",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0M2Q4OGNiNDk2YjM1ZGM3MmZiZDkiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMTY0MTB9.Q_B40VUbK9WoXe_6hZA7DXlAp1j4GFQRGrvE42XhcyE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/slots/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"slots",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a slot details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0M2Q4OGNiNDk2YjM1ZGM3MmZiZDkiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMTY0MTB9.Q_B40VUbK9WoXe_6hZA7DXlAp1j4GFQRGrvE42XhcyE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/slots/read/5ee45bc1d72bbc24389eda14",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"slots",
+								"read",
+								"5ee45bc1d72bbc24389eda14"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "paymentCategory",
+			"item": [
+				{
+					"name": "Create a payment category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3VycmVudEFkZHJlc3MiOiJOZXBhbCIsInBlcm1hbmVudEFkZHJlc3MiOiJOZXBhbCIsInBob25lIjoiKzk3Nzk4NDE0NjQ3MjciLCJlbWFpbCI6InByYWp3YWxnYWp1cmVsQG91dGxvb2suY29tIiwiZmF0aGVyTmFtZSI6InRlc3RlZSIsIm1vdGhlck5hbWUiOiJ0ZXN0ZWUiLCJjcmVhdGVkQXQiOiIyMDIwLTEwLTAxVDA2OjUyOjA3LjEwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTEwLTAxVDA2OjUyOjA3LjEwMFoiLCJpYXQiOjE2MDE1MzUxNzB9.F2JB-6Qj0E8w3_HR0T1esQajD4hv6YKbZSHaSyl-2XI"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"LUNCH_FEE\",\r\n    \"classroom\": \"5ee454d1e777062dd82ba898\",\r\n    \"amount\": 5000,\r\n    \"year\": 2020\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/payment-categories/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment-categories",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all payment categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/payment-categories/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment-categories",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a payment category detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/payment-categories/read/5f4890595ec8a7598aa40a02/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment-categories",
+								"read",
+								"5f4890595ec8a7598aa40a02",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search payment category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3VycmVudEFkZHJlc3MiOiJOZXBhbCIsInBlcm1hbmVudEFkZHJlc3MiOiJOZXBhbCIsInBob25lIjoiKzk3Nzk4NDE0NjQ3MjciLCJlbWFpbCI6InByYWp3YWxnYWp1cmVsQG91dGxvb2suY29tIiwiZmF0aGVyTmFtZSI6InRlc3RlZSIsIm1vdGhlck5hbWUiOiJ0ZXN0ZWUiLCJjcmVhdGVkQXQiOiIyMDIwLTEwLTAxVDA2OjUyOjA3LjEwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTEwLTAxVDA2OjUyOjA3LjEwMFoiLCJpYXQiOjE2MDE1MzUxNzB9.F2JB-6Qj0E8w3_HR0T1esQajD4hv6YKbZSHaSyl-2XI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classroom\": \"5ee454d1e777062dd82ba898\",\r\n    \"name\": \"LUNCH_FEE\",\r\n    \"year\": 2020\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/payment-categories/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment-categories",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "paymentConfiguration",
+			"item": [
+				{
+					"name": "Create a payment configuration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3VycmVudEFkZHJlc3MiOiJOZXBhbCIsInBlcm1hbmVudEFkZHJlc3MiOiJOZXBhbCIsInBob25lIjoiKzk3Nzk4NDE0NjQ3MjciLCJlbWFpbCI6InByYWp3YWxnYWp1cmVsQG91dGxvb2suY29tIiwiZmF0aGVyTmFtZSI6InRlc3RlZSIsIm1vdGhlck5hbWUiOiJ0ZXN0ZWUiLCJjcmVhdGVkQXQiOiIyMDIwLTA5LTI5VDAzOjEwOjIxLjIwNVoiLCJ1cGRhdGVkQXQiOiIyMDIwLTA5LTI5VDAzOjEwOjIxLjIwNVoiLCJpYXQiOjE2MDE1MzAyNzd9.f1YCyyJoB-JKBcvvCxwlKxJsK8tsxn2qNkPyKAyfKz0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"MONTHLY_FEE_GR_7_2020\",\r\n    \"paymentCategory\": \"5f4890595ec8a7598aa40a02\",\r\n    \"startDate\": 1577836800000, \r\n    \"endDate\": 1609459199999,\r\n    \"repetition\":\"MONTHLY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/payment-configurations/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment-configurations",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all payment configurations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/payment-configurations/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment-configurations",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a payment configuration detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/paymentconfigurations/read/5f7499559dcfd628cf8bd748/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"paymentconfigurations",
+								"read",
+								"5f7499559dcfd628cf8bd748",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search payment configuration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3VycmVudEFkZHJlc3MiOiJOZXBhbCIsInBlcm1hbmVudEFkZHJlc3MiOiJOZXBhbCIsInBob25lIjoiKzk3Nzk4NDE0NjQ3MjciLCJlbWFpbCI6InByYWp3YWxnYWp1cmVsQG91dGxvb2suY29tIiwiZmF0aGVyTmFtZSI6InRlc3RlZSIsIm1vdGhlck5hbWUiOiJ0ZXN0ZWUiLCJjcmVhdGVkQXQiOiIyMDIwLTA5LTMwVDE4OjQ3OjE4Ljk4M1oiLCJ1cGRhdGVkQXQiOiIyMDIwLTA5LTMwVDE4OjQ3OjE4Ljk4M1oiLCJpYXQiOjE2MDE0OTE2NDZ9.tt50wUYQSXKt96Wk4VarVUCEWVdJG-bATWPuMo37cX4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"MONTHLY_FEE_GR_2_2020\",\r\n   \"classroom\": \"5ee454d1e777062dd82ba898\",\r\n   \"year\": 2020,\r\n   \"repetition\": \"MONTHLY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/payment-configurations/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment-configurations",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate payment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3VycmVudEFkZHJlc3MiOiJOZXBhbCIsInBlcm1hbmVudEFkZHJlc3MiOiJOZXBhbCIsInBob25lIjoiKzk3Nzk4NDE0NjQ3MjciLCJlbWFpbCI6InByYWp3YWxnYWp1cmVsQG91dGxvb2suY29tIiwiZmF0aGVyTmFtZSI6InRlc3RlZSIsIm1vdGhlck5hbWUiOiJ0ZXN0ZWUiLCJjcmVhdGVkQXQiOiIyMDIwLTA5LTI5VDAzOjEwOjIxLjIwNVoiLCJ1cGRhdGVkQXQiOiIyMDIwLTA5LTI5VDAzOjEwOjIxLjIwNVoiLCJpYXQiOjE2MDE1MzAyNzd9.f1YCyyJoB-JKBcvvCxwlKxJsK8tsxn2qNkPyKAyfKz0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/payment-configurations/generate/5f7569daee0c5433d38fea42",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payment-configurations",
+								"generate",
+								"5f7569daee0c5433d38fea42"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "scholarshipConfiguration",
+			"item": [
+				{
+					"name": "Create a scholarship configuration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3VycmVudEFkZHJlc3MiOiJOZXBhbCIsInBlcm1hbmVudEFkZHJlc3MiOiJOZXBhbCIsInBob25lIjoiKzk3Nzk4NDE0NjQ3MjciLCJlbWFpbCI6InByYWp3YWxnYWp1cmVsQG91dGxvb2suY29tIiwiZmF0aGVyTmFtZSI6InRlc3RlZSIsIm1vdGhlck5hbWUiOiJ0ZXN0ZWUiLCJjcmVhdGVkQXQiOiIyMDIwLTA5LTI5VDAzOjEwOjIxLjIwNVoiLCJ1cGRhdGVkQXQiOiIyMDIwLTA5LTI5VDAzOjEwOjIxLjIwNVoiLCJpYXQiOjE2MDE0NzY3NzR9.aDR4LyAU7IYgSdADDSPcqIr02qQw3ck5_W5CEZacmFA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"LUNCH_SCHOLARSHIP\",\r\n    \"paymentCategory\": \"5f4890595ec8a7598aa40a02\",\r\n    \"student\":\"5f4ba19c093ec4046d9dbdb1\",\r\n    \"startDate\": 1577836800000,\r\n    \"endDate\": 1609459199999,\r\n    \"repetition\":\"MONTHLY\",\r\n    \"discount\":50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/scholarship-configurations/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"scholarship-configurations",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all scholarship configurations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/scholarship-configurations/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"scholarship-configurations",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a  scholarship configuration detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/scholarship-configurations/read/5f749efd9d1af42cbea6b59a/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"scholarship-configurations",
+								"read",
+								"5f749efd9d1af42cbea6b59a",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search scholarship configuration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"MONTHLY_FIXaaa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/scholarshipconfigurations/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"scholarshipconfigurations",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate scholarship",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3VycmVudEFkZHJlc3MiOiJOZXBhbCIsInBlcm1hbmVudEFkZHJlc3MiOiJOZXBhbCIsInBob25lIjoiKzk3Nzk4NDE0NjQ3MjciLCJlbWFpbCI6InByYWp3YWxnYWp1cmVsQG91dGxvb2suY29tIiwiZmF0aGVyTmFtZSI6InRlc3RlZSIsIm1vdGhlck5hbWUiOiJ0ZXN0ZWUiLCJjcmVhdGVkQXQiOiIyMDIwLTA5LTI5VDAzOjEwOjIxLjIwNVoiLCJ1cGRhdGVkQXQiOiIyMDIwLTA5LTI5VDAzOjEwOjIxLjIwNVoiLCJpYXQiOjE2MDE1MzAyNzd9.f1YCyyJoB-JKBcvvCxwlKxJsK8tsxn2qNkPyKAyfKz0"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/scholarship-configurations/generate/5f759c053979755968f0df5d",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"scholarship-configurations",
+								"generate",
+								"5f759c053979755968f0df5d"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "Create a payment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3JlYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwidXBkYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwiaWF0IjoxNTk4MzUxNDQxfQ.EHg1q_OaSGR18JGb83UcVGEcyLz3XY-j_Uiu07YfWOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"user\": \"5f16e39ce90c0a3ce036206b\",\r\n        \"paymentCategory\":\"5f4890595ec8a7598aa40a01\",\r\n        \"year\":2019,\r\n        \"month\":2,\r\n        \"student\":\"5f4ba19c093ec4046d9dbdb2\",\r\n        \"classroom\":\"5f326b1c6aaffc26b4afe107\",\r\n        \"isPaid\":false,\r\n        \"amount\":2000\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/payments/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all payments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/payments/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a payment detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/payments/read/5f4523bde4ce83174e6ed6b4/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"read",
+								"5f4523bde4ce83174e6ed6b4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search payment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3VycmVudEFkZHJlc3MiOiJOZXBhbCIsInBlcm1hbmVudEFkZHJlc3MiOiJOZXBhbCIsInBob25lIjoiKzk3Nzk4NDE0NjQ3MjciLCJlbWFpbCI6InByYWp3YWxnYWp1cmVsQG91dGxvb2suY29tIiwiZmF0aGVyTmFtZSI6InRlc3RlZSIsIm1vdGhlck5hbWUiOiJ0ZXN0ZWUiLCJjcmVhdGVkQXQiOiIyMDIwLTEwLTAxVDA5OjAzOjIyLjc0MVoiLCJ1cGRhdGVkQXQiOiIyMDIwLTEwLTAxVDA5OjAzOjIyLjc0MVoiLCJpYXQiOjE2MDE1NDM4MzV9.KcfSs0awZ0Z3ig8Hzwc06F9pCGzOyXus_bgqRkOgXh8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"year\": 2020}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/payments/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate a payment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3JlYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwidXBkYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwiaWF0IjoxNTk4MzUxNDQxfQ.EHg1q_OaSGR18JGb83UcVGEcyLz3XY-j_Uiu07YfWOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"paymentConfiguration\":\"5f74b256a8f6803a5575aa93\",\r\n   \"classroom\":\"5ee454d1e777062dd82ba898\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/payments/generate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"generate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Make a payment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/payments/5f4cdf0f633e2b18e549be12/pay",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"5f4cdf0f633e2b18e549be12",
+								"pay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk payment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiQUNDT1VOVEFOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmMiLCJ1c2VybmFtZSI6ImFjY18wMDEiLCJjdXJyZW50QWRkcmVzcyI6Ik5lcGFsIiwicGVybWFuZW50QWRkcmVzcyI6Ik5lcGFsIiwicGhvbmUiOiIrOTc3OTg0MTQ2NDcyNyIsImVtYWlsIjoicHJhandhbGdhanVyZWxAb3V0bG9vay5jb20iLCJmYXRoZXJOYW1lIjoidGVzdGVlIiwibW90aGVyTmFtZSI6InRlc3RlZSIsImNyZWF0ZWRBdCI6IjIwMjAtMTAtMDdUMTQ6Mjk6NDIuMzcyWiIsInVwZGF0ZWRBdCI6IjIwMjAtMTAtMDdUMTQ6Mjk6NDIuMzcyWiIsImlhdCI6MTYwMjE1OTg0OH0.qPGb1p29dx6j8ZoAIvzajriOWO4EwwLhT15izgei9Y0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"user\":\"5f16e39ce90c0a3ce036206a\",\"year\": 2020, \"month\": 9}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/payments/bulk-pay",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"bulk-pay"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "exam",
+			"item": [
+				{
+					"name": "Create an exam",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3JlYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwidXBkYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwiaWF0IjoxNTk4MzUxNDQxfQ.EHg1q_OaSGR18JGb83UcVGEcyLz3XY-j_Uiu07YfWOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"First Terminal Exam\",\r\n    \"type\":\"TERMINAL_EXAM\",\r\n    \"startDate\":\"2020/12/20\",\r\n    \"endDate\":\"2020/12/30\",\r\n    \"classroom\":\"5ee454d1e777062dd82ba898\",\r\n    \"year\":2020,\r\n    \"terminal\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/exams/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"exams",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all exams",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjM0Njh9.tZLJfCp1ZfHF8zA5kYbILMAocd6Q0euuLwKC3rrn18M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/exams/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"exams",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an exam details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjQyNjh9.AXwjyaeBXHuITtZ1z5A8Md66qmu6n9eK26JoD5zI-mk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/exams/read/5f45d0b5212d511e3e2a1890/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"exams",
+								"read",
+								"5f45d0b5212d511e3e2a1890",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search an exam",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"Terminal Exam\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/exams/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"exams",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "subject",
+			"item": [
+				{
+					"name": "Create a subject",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3JlYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwidXBkYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwiaWF0IjoxNTk4MzUxNDQxfQ.EHg1q_OaSGR18JGb83UcVGEcyLz3XY-j_Uiu07YfWOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"First Terminal Exam\",\r\n    \"type\":\"TERMINAL_EXAM\",\r\n    \"startDate\":\"2020/12/20\",\r\n    \"endDate\":\"2020/12/30\",\r\n    \"classroom\":\"5ee454d1e777062dd82ba898\",\r\n    \"year\":2020,\r\n    \"terminal\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/exams/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"exams",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all subjects",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjM0Njh9.tZLJfCp1ZfHF8zA5kYbILMAocd6Q0euuLwKC3rrn18M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/subjects/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"subjects",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a subject details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjQyNjh9.AXwjyaeBXHuITtZ1z5A8Md66qmu6n9eK26JoD5zI-mk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/subjects/read/5f45d0b5212d511e3e2a1890/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"subjects",
+								"read",
+								"5f45d0b5212d511e3e2a1890",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search a subject",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"Terminal Exam\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/subjects/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"subjects",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "examDetails",
+			"item": [
+				{
+					"name": "Create an examDetails",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3JlYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwidXBkYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwiaWF0IjoxNTk4MzUxNDQxfQ.EHg1q_OaSGR18JGb83UcVGEcyLz3XY-j_Uiu07YfWOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"exam\": \"5f267e1e24b5ab26cc63ff97\",\r\n    \"classroom\": \"5ee454d1e777062dd82ba898\",\r\n    \"subject\": \"5f290e4be0bf823ec00ede91\",\r\n    \"theoryFullMarks\": 75,\r\n    \"pracFullMarks\": 25,\r\n    \"theoryPassMarks\": 35,\r\n    \"pracPassMarks\": 15,\r\n    \"date\": \"2020/08/21\",\r\n    \"startTime\": 234092309482,\r\n    \"endTime\": 23409235834758,\r\n    \"invigilator\": \"5f16e39ee90c0a3ce036206e\",\r\n    \"examiner\": \"5f16e39ce90c0a3ce036206d\",\r\n    \"grader\": \"5f16e39ce90c0a3ce036206d\",\r\n    \"questionSet\": \"5f7dceed306417990e9cac4c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/examdetails/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"examdetails",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all examDetails",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjM0Njh9.tZLJfCp1ZfHF8zA5kYbILMAocd6Q0euuLwKC3rrn18M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/examdetails/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"examdetails",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an examDetail details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjQyNjh9.AXwjyaeBXHuITtZ1z5A8Md66qmu6n9eK26JoD5zI-mk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/examdetails/read/5facd3824741e91d64208447/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"examdetails",
+								"read",
+								"5facd3824741e91d64208447",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search an examDetails",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"exam\": \"5f267e1e24b5ab26cc63ff97\",\r\n      \"classroom\": \"5ee454d1e777062dd82ba898\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/examdetails/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"examdetails",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add questionset in examDetails",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"questionSet\": \"5f7dceed306417990e9cac4c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/examdetails/5f28cd8ba9c8de3ad0cc1ee9/addquestion",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"examdetails",
+								"5f28cd8ba9c8de3ad0cc1ee9",
+								"addquestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get student exam hasAttended status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3JlYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwidXBkYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwiaWF0IjoxNTk4MzUxNDQxfQ.EHg1q_OaSGR18JGb83UcVGEcyLz3XY-j_Uiu07YfWOU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/examdetails/5f16e39ce90c0a3ce036206a/5f28cd8ba9c8de3ad0cc1ee9/has_attended",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"examdetails",
+								"5f16e39ce90c0a3ce036206a",
+								"5f28cd8ba9c8de3ad0cc1ee9",
+								"has_attended"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "examReport",
+			"item": [
+				{
+					"name": "Create an exam report",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3JlYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwidXBkYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwiaWF0IjoxNTk4MzUxNDQxfQ.EHg1q_OaSGR18JGb83UcVGEcyLz3XY-j_Uiu07YfWOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"exam\": \"5f267e1e24b5ab26cc63ff97\",\r\n    \"student\": \"5f16e39ce90c0a3ce036206a\",\r\n    \"totalMarks\": 430,\r\n    \"result\": \"PASS\",\r\n    \"remarks\": \"Outstanding\",\r\n    \"gpa\": 3.45\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/examreports/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"examreports",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all exam reports",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjM0Njh9.tZLJfCp1ZfHF8zA5kYbILMAocd6Q0euuLwKC3rrn18M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/examreports/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"examreports",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an exam report details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjQyNjh9.AXwjyaeBXHuITtZ1z5A8Md66qmu6n9eK26JoD5zI-mk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/examreports/read/5f28ceb6663c1c2a4c056876/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"examreports",
+								"read",
+								"5f28ceb6663c1c2a4c056876",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search an exam Report",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"exam\": \"5f267e1e24b5ab26cc63ff97\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/examreports/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"examreports",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "examReportRelease",
+			"item": [
+				{
+					"name": "Create an exam report release",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZjE2ZTM5Y2U5MGMwYTNjZTAzNjIwNmQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJjdXJyZW50QWRkcmVzcyI6Ik5lcGFsIiwicGVybWFuZW50QWRkcmVzcyI6Ik5lcGFsIiwicGhvbmUiOiIrOTc3OTg0MTQ2NDcyNyIsImVtYWlsIjoicHJhandhbGdhanVyZWxAb3V0bG9vay5jb20iLCJmYXRoZXJOYW1lIjoidGVzdGVlIiwibW90aGVyTmFtZSI6InRlc3RlZSIsImNyZWF0ZWRBdCI6IjIwMjAtMDgtMzFUMTE6MjI6MzQuMjAyWiIsInVwZGF0ZWRBdCI6IjIwMjAtMDgtMzFUMTE6MjI6MzQuMjAyWiIsImlhdCI6MTYwMDQyNzI5Nn0.Xapg2ywXjd-kOlZc2CSkM9MkD-hT2ygQRh8fjKhrJeo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"exam\":  \"5f64958667c2db33e25ebea9\",\r\n    \"classroom\": \"5ee454d1e777062dd82ba898\",\r\n    \"isReleased\":\"true\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/examreportreleases/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"examreportreleases",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all exam report releases",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjM0Njh9.tZLJfCp1ZfHF8zA5kYbILMAocd6Q0euuLwKC3rrn18M"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/examreportreleases/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"examreportreleases",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an exam report release details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjQyNjh9.AXwjyaeBXHuITtZ1z5A8Md66qmu6n9eK26JoD5zI-mk"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/examreportreleases/read/5f642f0ab728152d8e0b173e/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"examreportreleases",
+								"read",
+								"5f642f0ab728152d8e0b173e",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search an exam Report Release",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"exam\": \"5f267e1e24b5ab26cc63ff97\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/examreportreleases/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"examreportreleases",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "marksheet",
+			"item": [
+				{
+					"name": "Create a marksheet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3JlYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwidXBkYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwiaWF0IjoxNTk4MzUxNDQxfQ.EHg1q_OaSGR18JGb83UcVGEcyLz3XY-j_Uiu07YfWOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"exam\":\"5f267e1e24b5ab26cc63ff97\",\r\n    \"examDetail\": \"5f28cd8ba9c8de3ad0cc1ee9\",\r\n    \"student\": \"5f16e39ce90c0a3ce036206a\",\r\n    \"theoryMarks\": 68,\r\n    \"pracMarks\": 22\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/marksheets/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"marksheets",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all marksheets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjM0Njh9.tZLJfCp1ZfHF8zA5kYbILMAocd6Q0euuLwKC3rrn18M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/marksheets/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"marksheets",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a marksheet details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjQyNjh9.AXwjyaeBXHuITtZ1z5A8Md66qmu6n9eK26JoD5zI-mk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/marksheets/read/5f28d1c433675d3b2cb43a18/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"marksheets",
+								"read",
+								"5f28d1c433675d3b2cb43a18",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search marksheet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"exam\":\"5f267e1e24b5ab26cc63ff97\",\r\n   \"student\": \"5f16e39ce90c0a3ce036206a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/marksheets/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"marksheets",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "message",
+			"item": [
+				{
+					"name": "Create a message",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"sender\":\"5f16e39ce90c0a3ce036206a\",\r\n    \"receiver\":\"5f16e39ce90c0a3ce036206b\",\r\n    \"content\":\"Hello\",\r\n    \"parent\":\"5f64a15a8276cb1038cad4fc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/messages/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"messages",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all messages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/messages/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"messages",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a mesage details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjQyNjh9.AXwjyaeBXHuITtZ1z5A8Md66qmu6n9eK26JoD5zI-mk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/messages/read/5f539f677a056b3be338f155/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"messages",
+								"read",
+								"5f539f677a056b3be338f155",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search message",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sender\":\"5f16e39ce90c0a3ce036206a\",\r\n    \"receiver\":\"5f16e39ce90c0a3ce036206b\",\r\n    \"content\":\"he\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/messages/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"messages",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "attendance",
+			"item": [
+				{
+					"name": "Create attendance",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\":\"5f16e39ce90c0a3ce036206a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/attendances/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"attendances",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all attendances",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/attendances/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"attendances",
+								"read"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an attendance details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIwMjQyNjh9.AXwjyaeBXHuITtZ1z5A8Md66qmu6n9eK26JoD5zI-mk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/attendances/read/5f62220149d4c11a08b167b3/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"attendances",
+								"read",
+								"5f62220149d4c11a08b167b3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search an attendance",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWU0NThmZDAwZmUwZTMyYjhlMmY0YzciLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTIzOTI5OTh9.qiATeh0TemetTycQAvVSpc0NP_lRn6Mavz_c0RIZozs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"classroom\": \"5ee454d1e777062dd82ba898\",\r\n  \"startDate\": 1577836800060,\r\n   \"endDate\": 1577836800499\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/attendances/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"attendances",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "information",
+			"item": [
+				{
+					"name": "Create an information",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3JlYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwidXBkYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwiaWF0IjoxNTk4MzUxNDQxfQ.EHg1q_OaSGR18JGb83UcVGEcyLz3XY-j_Uiu07YfWOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"summary\":\"First Terminal Exam Notice\",\r\n    \"category\": \"Notice\",\r\n    \"description\": \"First Terminal exam will be held on 20th October 2020.\",\r\n    \"validDate\": \"10/11/2020\",\r\n    \"notifier\":\"5f16e39ee90c0a3ce036206f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/informations/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"informations",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all informations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/informations/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"informations",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get an information detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/informations/read/5f641cd64adc7122184bf0fa/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"informations",
+								"read",
+								"5f641cd64adc7122184bf0fa",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search information",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\": \"Notice\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/informations/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"informations",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "event",
+			"item": [
+				{
+					"name": "Create an event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiTUFOQUdFTUVOVCJdLCJfaWQiOiI1ZjE2ZTM5ZWU5MGMwYTNjZTAzNjIwNmYiLCJ1c2VybmFtZSI6Im1nbXRfMDAxIiwiY3JlYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwidXBkYXRlZEF0IjoiMjAyMC0wOC0yNFQxMjo1Nzo1MC4yNzBaIiwiaWF0IjoxNTk4MzUxNDQxfQ.EHg1q_OaSGR18JGb83UcVGEcyLz3XY-j_Uiu07YfWOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Parents' Day\",\r\n    \"startYear\":2020,\r\n    \"startMonth\":10,\r\n    \"startDate\":1,\r\n    \"endYear\": 2020,\r\n    \"endMonth\": 10,\r\n    \"endDate\": 13,\r\n    \"startTime\": \"1231239817328473298\",\r\n    \"endTime\": \"1231231242412412412412\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/events/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/events/read",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get an event detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/events/read/5f641cd64adc7122184bf0fa/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"read",
+								"5f641cd64adc7122184bf0fa",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGF0dXMiOiJBQ1RJVkUiLCJncm91cHMiOlsiVEVBQ0hFUiJdLCJfaWQiOiI1ZWY2YmJlNjI1ZjgzNTVkMTk1YTRkNTQiLCJ1c2VybmFtZSI6InRlYV8wMDEiLCJpYXQiOjE1OTMyMzM3Njh9.3OQxnhPNgHQ48kp3T0cLX8b_NG5O0HivQKtQYpMKxlI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startYear\": 2020,\r\n    \"startMonth\":10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/events/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
