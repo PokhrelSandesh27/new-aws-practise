@@ -7,8 +7,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - URL=
-      - SUBDOMAINS=
+      - URL=sandeshpractise.tk
+      - SUBDOMAINS=www
       - VALIDATION=dns
       - DNSPLUGIN=route53
       - EMAIL=everestwalk123@gmail.com
@@ -20,11 +20,14 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./nginx
-    ports: 
+    ports:
+      - "443:443" 
       - "80:80"
     depends_on:
       - api
       - client 
+    volumes:
+      - ./config/certs:/etc/ssl/private
   #db:
    # restart: unless-stopped
    # image: 'mongo:latest'
@@ -35,7 +38,7 @@ services:
   client:
     container_name: client
     stdin_open: true
-    image: pokhrelsandesh27/new-front
+    image: pokhrelsandesh27/new-front:0.1
       
   api:
     container_name: api
