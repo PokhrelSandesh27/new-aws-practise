@@ -11,7 +11,7 @@ services:
       - SUBDOMAINS=www
       - VALIDATION=dns
       - DNSPLUGIN=route53
-      - EMAIL=everestwalk123@gmail.com
+      - EMAIL=sandeshpokhrel17@gmail.com
       - DHLEVEL=4096
     volumes: 
       - ./config:/config 
@@ -28,13 +28,13 @@ services:
       - client 
     volumes:
       - ./config/certs:/etc/ssl/private
-  #db:
-   # restart: unless-stopped
-   # image: 'mongo:latest'
-   # ports: 
-   #   - 27017:27017
-   # volumes: 
-   #   - /data:/data/db
+  db:
+    restart: unless-stopped
+    image: 'mongo:latest'
+    ports: 
+      - 27017:27017
+    volumes: 
+      - /data:/data/db
   client:
     container_name: client
     stdin_open: true
